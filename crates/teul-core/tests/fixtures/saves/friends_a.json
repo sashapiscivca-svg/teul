@@ -1,0 +1,297 @@
+{
+ "kind": "teul-world",
+ "format": 2,
+ "app": "1.0.0",
+ "made": "2026-10-11T12:00:00.000Z",
+ "world": {
+  "meta": {
+   "device": 3003,
+   "seed": 21,
+   "epochUnixSecs": 1791579600,
+   "secret": 300300021021,
+   "idSeed": "3333333333333333333333333333333333333333333333333333333333333333",
+   "format": 2,
+   "content": "base@1",
+   "app": "1.0.0"
+  },
+  "events": [
+   {
+    "id": {
+     "device": 3003,
+     "seq": 0
+    },
+    "time": 542,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "name_player",
+      "name": "Марта"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 4446730931521479
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 1
+    },
+    "time": 542,
+    "rules_version": 2,
+    "kind": {
+     "type": "PlayerNamed",
+     "name": "Марта"
+    },
+    "chain": 688238350728229
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 2
+    },
+    "time": 544,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "set_identity",
+      "key": "17cb79fb2b4120f2b1ec65e4198d6e08b28e813feb01e4a400839b85e18080ce"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3652484647218731
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 3
+    },
+    "time": 544,
+    "rules_version": 2,
+    "kind": {
+     "type": "IdentitySet",
+     "key": "17cb79fb2b4120f2b1ec65e4198d6e08b28e813feb01e4a400839b85e18080ce"
+    },
+    "chain": 780812237756659
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 4
+    },
+    "time": 554,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "dump"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1679838091804807
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 5
+    },
+    "time": 554,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "dump",
+     "day": 0
+    },
+    "chain": 2627749109688556
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 6
+    },
+    "time": 563,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "gather",
+      "spot": "dump.dump.2"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1823457523373132
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 7
+    },
+    "time": 563,
+    "rules_version": 2,
+    "kind": {
+     "type": "Gathered",
+     "spot": "dump.dump.2",
+     "day": 0,
+     "item": "worn_stool"
+    },
+    "chain": 3086981617586152
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 8
+    },
+    "time": 568,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "home"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3517059669406516
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 9
+    },
+    "time": 568,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "home",
+     "day": 0
+    },
+    "chain": 3578420649286616
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 10
+    },
+    "time": 570,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "send_parcel",
+      "to": "d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48",
+      "item": "worn_stool",
+      "note": "Тобі на новосілля!",
+      "nonce": 7002
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2317360399601046
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 11
+    },
+    "time": 570,
+    "rules_version": 2,
+    "kind": {
+     "type": "ParcelSent",
+     "to": "d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48",
+     "item": "worn_stool",
+     "note": "Тобі на новосілля!",
+     "nonce": 7002,
+     "day": 0
+    },
+    "chain": 1267120975910007
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 12
+    },
+    "time": 572,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "receive_parcel",
+      "parcel": {
+       "parcel": {
+        "from": "d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48",
+        "from_name": "Ганна",
+        "to": "17cb79fb2b4120f2b1ec65e4198d6e08b28e813feb01e4a400839b85e18080ce",
+        "nonce": 7003,
+        "item": null,
+        "note": "Дякую! Приходь на чай."
+       },
+       "sig": "8ff1472bd4654fb33331eff76b56e7842a6512e4097ef583a23eef6e3ff15e65ebfbb883f9b0ca03abf6b95b3f39850b8725995238474ad60d81232222700404"
+      }
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 4491759463872741
+   },
+   {
+    "id": {
+     "device": 3003,
+     "seq": 13
+    },
+    "time": 572,
+    "rules_version": 2,
+    "kind": {
+     "type": "ParcelReceived",
+     "from": "d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48",
+     "from_name": "Ганна",
+     "item": null,
+     "note": "Дякую! Приходь на чай.",
+     "nonce": 7003,
+     "day": 0,
+     "to_chest": false
+    },
+    "chain": 404436682303470
+   }
+  ],
+  "snapshots": [
+   {
+    "json": "{\"through\":[542,3003,1],\"state\":{\"player_name\":\"Марта\",\"events_applied\":2,\"room\":{\"placements\":{},\"next_pid\":0,\"expansions\":[],\"styles\":{},\"owned_styles\":[],\"owned_themes\":[],\"added\":[],\"removed\":[],\"dividers\":[],\"floor_paint\":{},\"wall_paint\":{},\"settings\":{},\"built_area\":0},\"owned\":{},\"earned\":0,\"spent\":0,\"tokens\":{},\"counters\":{},\"reward_days\":{},\"kindness\":[],\"relations\":{},\"kits\":[],\"gathered\":{},\"catches\":[0,0],\"collected\":[],\"collections\":[],\"delivered\":[],\"ask_gifts\":[],\"letters\":[],\"story\":{},\"location\":null,\"stashed\":{},\"helped\":[],\"station_uses\":{},\"interviews\":{},\"minute_inputs\":[542,1],\"fridge\":{},\"bills_paid\":[],\"quests\":{},\"reputation\":0,\"titles\":[],\"recipes_learned\":[],\"jobs_taken\":{},\"me\":null,\"parcels_sent\":{},\"parcels_received\":[],\"inbox\":[],\"guests\":{\"here\":{},\"sent_away\":{},\"ever\":{},\"rules\":{\"shut\":false,\"closed\":[]}},\"shift\":null,\"work_record\":{},\"plots\":{},\"practice\":{},\"paintings\":[],\"last_played\":null,\"repertoire\":[],\"last_busk\":null,\"busked\":[0,0],\"first_outfit\":{},\"outfit_kept\":false,\"address\":null,\"leases\":{},\"homes_bought\":[],\"congratulated\":[],\"dined\":[],\"contributions\":{},\"warmed_at\":null,\"wear\":{},\"crafts_known\":[],\"tool_uses\":{},\"drive\":{\"lessons\":0,\"last_lesson\":null,\"theory\":false,\"theory_tried\":null,\"exam\":null,\"exam_tried\":null,\"licence\":null,\"taken_until\":null,\"holes\":[],\"fines_due\":0,\"car\":null,\"trip\":null,\"jailed_until\":null,\"found\":[],\"log\":[],\"unseen\":0,\"violations\":0},\"builds\":[],\"pets\":{\"owned\":{},\"fox_days\":[],\"egg\":null,\"companion\":null}},\"covered\":2,\"tips\":{\"3003\":688238350728229},\"seqs\":{\"3003\":1},\"chained\":[3003],\"legacy\":0,\"inputs\":1,\"dropped\":[],\"inputs_seen\":true,\"mac\":1489451078784159}",
+    "through": [
+     542,
+     3003,
+     1
+    ],
+    "covered": 2
+   }
+  ],
+  "userItems": []
+ },
+ "local": [
+  [
+   "w17cb79fb.teul.net.contacts",
+   "[{\"fp\":\"d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48\",\"x\":\"d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48\",\"sign\":\"d759793bbc13a2819a827c76adb6fba8a49aee007f49f2d0992d99b825ad2c48\",\"npub\":\"\",\"nostr\":\"\",\"nick\":\"Ганна\",\"verified\":true,\"blocked\":false,\"added\":1791000000000}]"
+  ],
+  [
+   "teul.prefs",
+   "{\"master\":0.6}"
+  ]
+ ],
+ "expect": {
+  "inputs": 7,
+  "coins": 300,
+  "placements": [],
+  "inventory": [
+   [
+    "worn_stool",
+    0
+   ]
+  ],
+  "name": "Марта",
+  "people": {
+   "me": "17cb79fb2b4120f2b1ec65e4198d6e08b28e813feb01e4a400839b85e18080ce",
+   "sent": 1,
+   "inbox": 1
+  }
+ },
+ "note": "A friend (Ганна) in the contacts; a parcel with a thing sent to her, a letter back received."
+}

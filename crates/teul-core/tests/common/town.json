@@ -1,0 +1,641 @@
+{
+ "schema": 1,
+ "id": "town",
+ "version": 1,
+ "start_coins": 400,
+ "items": [
+  {
+   "id": "plank",
+   "name": "item.plank",
+   "category": "nature",
+   "tags": [
+    "material"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "cake",
+   "name": "item.cake",
+   "category": "nature",
+   "tags": [
+    "sweet",
+    "food"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "flowers_bunch",
+   "name": "item.flowers_bunch",
+   "category": "nature",
+   "tags": [
+    "flower"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "ice_cream",
+   "name": "item.ice_cream",
+   "category": "nature",
+   "tags": [
+    "sweet",
+    "food"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "book",
+   "name": "item.book",
+   "category": "nature",
+   "tags": [
+    "book"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "counter",
+   "name": "item.counter",
+   "category": "village",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "hidden": true
+  }
+ ],
+ "locations": [
+  {
+   "id": "village",
+   "name": "Село",
+   "w": 14,
+   "h": 10,
+   "tiles": [
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg",
+    "gggggggggggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "entry": [
+    0,
+    0
+   ],
+   "props": [
+    {
+     "item": "counter",
+     "x": 2,
+     "y": 2
+    },
+    {
+     "item": "plant",
+     "x": 6,
+     "y": 6,
+     "flag": "project:proj.playground:stage1"
+    },
+    {
+     "item": "sofa",
+     "x": 8,
+     "y": 6,
+     "flag": "project:proj.playground:done"
+    },
+    {
+     "item": "counter",
+     "x": 11,
+     "y": 2,
+     "flag": "open:open.icecream"
+    },
+    {
+     "item": "vase",
+     "x": 12,
+     "y": 8,
+     "unflag": "project:proj.playground:done"
+    }
+   ],
+   "sites": [
+    {
+     "id": "home_a",
+     "name": "Дім Петренків",
+     "kind": "home",
+     "x": 1,
+     "y": 8,
+     "area": [
+      1,
+      8,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "home_b",
+     "name": "Дім Коваленків",
+     "kind": "home",
+     "x": 3,
+     "y": 8,
+     "area": [
+      3,
+      8,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "home_c",
+     "name": "Дім молодих",
+     "kind": "home",
+     "x": 5,
+     "y": 8,
+     "area": [
+      5,
+      8,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "home_d",
+     "name": "Дім діда Степана",
+     "kind": "home",
+     "x": 7,
+     "y": 8,
+     "area": [
+      7,
+      8,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "home_e",
+     "name": "Дім новоселів",
+     "kind": "home",
+     "x": 9,
+     "y": 8,
+     "area": [
+      9,
+      8,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "home_f",
+     "name": "Дім вдови",
+     "kind": "home",
+     "x": 11,
+     "y": 8,
+     "area": [
+      11,
+      8,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "cafe",
+     "name": "Кав'ярня",
+     "kind": "cafe",
+     "x": 2,
+     "y": 4,
+     "area": [
+      2,
+      4,
+      1,
+      1
+     ],
+     "jobs": [
+      {
+       "role": "barista",
+       "from": 480,
+       "to": 1020
+      }
+     ]
+    },
+    {
+     "id": "square",
+     "name": "Площа",
+     "kind": "square",
+     "x": 6,
+     "y": 3,
+     "area": [
+      6,
+      3,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "church",
+     "name": "Костел",
+     "kind": "church",
+     "x": 9,
+     "y": 2,
+     "area": [
+      9,
+      2,
+      1,
+      1
+     ],
+     "jobs": [
+      {
+       "role": "priest",
+       "from": 420,
+       "to": 1200
+      }
+     ]
+    },
+    {
+     "id": "cemetery",
+     "name": "Кладовище",
+     "kind": "cemetery",
+     "x": 12,
+     "y": 1,
+     "area": [
+      12,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "id": "townhall",
+     "name": "Ратуша",
+     "kind": "townhall",
+     "x": 4,
+     "y": 1,
+     "area": [
+      4,
+      1,
+      1,
+      1
+     ],
+     "jobs": [
+      {
+       "role": "clerk",
+       "from": 480,
+       "to": 1020
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "townhall_in",
+   "name": "Ратуша",
+   "w": 6,
+   "h": 5,
+   "tiles": [
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "inside": "townhall",
+   "props": [
+    {
+     "item": "table",
+     "x": 2,
+     "y": 1
+    }
+   ]
+  },
+  {
+   "id": "guest_home",
+   "name": "У гостях",
+   "w": 6,
+   "h": 5,
+   "tiles": [
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "inside": "home_f",
+   "invite_only": true,
+   "props": [
+    {
+     "item": "table",
+     "x": 2,
+     "y": 2
+    }
+   ]
+  }
+ ],
+ "residents": [
+  {
+   "id": "r.ivan",
+   "name": "Іван Петренко",
+   "gender": "m",
+   "age": "adult",
+   "home": "home_a",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "job": [
+    "cafe",
+    "barista"
+   ],
+   "partner": "r.olha"
+  },
+  {
+   "id": "r.olha",
+   "name": "Ольга Петренко",
+   "gender": "f",
+   "age": "adult",
+   "home": "home_a",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "partner": "r.ivan"
+  },
+  {
+   "id": "r.mykola",
+   "name": "Миколка Петренко",
+   "gender": "m",
+   "age": "child",
+   "home": "home_a",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60
+  },
+  {
+   "id": "r.petro",
+   "name": "Петро Коваленко",
+   "gender": "m",
+   "age": "elder",
+   "home": "home_b",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "partner": "r.hanna"
+  },
+  {
+   "id": "r.hanna",
+   "name": "Ганна Коваленко",
+   "gender": "f",
+   "age": "elder",
+   "home": "home_b",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "partner": "r.petro"
+  },
+  {
+   "id": "r.taras",
+   "name": "Тарас",
+   "gender": "m",
+   "age": "adult",
+   "home": "home_c",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "partner": "r.maria",
+   "young": true
+  },
+  {
+   "id": "r.maria",
+   "name": "Марія",
+   "gender": "f",
+   "age": "adult",
+   "home": "home_c",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "partner": "r.taras",
+   "young": true
+  },
+  {
+   "id": "r.stepan",
+   "name": "Степан",
+   "gender": "m",
+   "age": "elder",
+   "home": "home_d",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60
+  },
+  {
+   "id": "r.nina",
+   "name": "Ніна",
+   "gender": "f",
+   "age": "elder",
+   "home": "home_f",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60
+  },
+  {
+   "id": "r.ostap",
+   "name": "Остап Мельник",
+   "gender": "m",
+   "age": "adult",
+   "home": "home_e",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "arrives": 40
+  },
+  {
+   "id": "r.priest",
+   "name": "Отець Павло",
+   "gender": "m",
+   "age": "adult",
+   "home": "church",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "job": [
+    "church",
+    "priest"
+   ]
+  },
+  {
+   "id": "r.clerk",
+   "name": "Зоя",
+   "gender": "f",
+   "age": "adult",
+   "home": "townhall",
+   "honesty": 70,
+   "temper": 30,
+   "social": 60,
+   "job": [
+    "townhall",
+    "clerk"
+   ]
+  }
+ ],
+ "stations": [
+  {
+   "id": "st.icecream",
+   "location": "village",
+   "prop": "counter",
+   "label": "Морозиво",
+   "text": "Холодне й солодке.",
+   "cost": 5,
+   "gives": [
+    [
+     "ice_cream",
+     1
+    ]
+   ],
+   "per_day": 3,
+   "kind": "buy",
+   "flag": "open:open.icecream"
+  },
+  {
+   "id": "st.cakes",
+   "location": "village",
+   "prop": "counter",
+   "label": "Торт",
+   "text": "Свіжий торт.",
+   "cost": 2,
+   "gives": [
+    [
+     "cake",
+     1
+    ]
+   ],
+   "per_day": 50,
+   "kind": "buy"
+  },
+  {
+   "id": "st.planks",
+   "location": "village",
+   "prop": "counter",
+   "label": "Дошки",
+   "text": "Дошки з пилорами.",
+   "cost": 1,
+   "gives": [
+    [
+     "plank",
+     1
+    ]
+   ],
+   "per_day": 50,
+   "kind": "buy"
+  }
+ ],
+ "projects": [
+  {
+   "id": "proj.playground",
+   "name": "Дитячий майданчик",
+   "text": "Гойдалки для малечі.",
+   "location": "village",
+   "coins": 300,
+   "items": [
+    [
+     "plank",
+     3
+    ]
+   ],
+   "town_coins": 10,
+   "town_items_every": 5,
+   "stages": [
+    {
+     "name": "Огорожа",
+     "days": 2
+    },
+    {
+     "name": "Будівництво",
+     "days": 3
+    }
+   ],
+   "opens": 0,
+   "done": "Майданчик відкрито!"
+  },
+  {
+   "id": "proj.lights",
+   "name": "Ліхтарі на дорозі",
+   "text": "Світло до ферми.",
+   "location": "village",
+   "coins": 200,
+   "town_coins": 20,
+   "stages": [
+    {
+     "name": "Стовпи",
+     "days": 2
+    }
+   ],
+   "opens": 0,
+   "after": [
+    "proj.playground"
+   ],
+   "done": "Ліхтарі світять."
+  }
+ ],
+ "openings": [
+  {
+   "id": "open.icecream",
+   "name": "Кіоск з морозивом",
+   "text": "Відкрився кіоск з морозивом.",
+   "months": [
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "id": "open.bookstall",
+   "name": "Книжкова ятка",
+   "text": "Біля ратуші продають книжки.",
+   "after": "proj.playground"
+  }
+ ],
+ "births": [
+  "Софійка",
+  "Михайлик",
+  "Олеся",
+  "Богдан"
+ ]
+}

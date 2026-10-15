@@ -1,0 +1,25 @@
+[workspace]
+members = ["crates/teul-core", "crates/teul-wasm", "crates/teul-music"]
+resolver = "2"
+exclude = ["desktop/src-tauri"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+
+# Tests read the content pack again and again; unoptimised JSON parsing made them crawl.
+[profile.test]
+opt-level = 1
+
+[profile.test.package."*"]
+opt-level = 3
+
+# Everyday wasm builds (`npm run wasm`): the release's optimisation without the whole-program LTO pass, so a
+# change to the core rebuilds in seconds, not a minute. Releases still build with `--release`.
+[profile.wasm-dev]
+inherits = "release"
+lto = false
+codegen-units = 16
+incremental = true

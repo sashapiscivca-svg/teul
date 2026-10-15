@@ -1,0 +1,443 @@
+{
+ "schema": 1,
+ "id": "craft",
+ "version": 1,
+ "items": [
+  {
+   "id": "planks",
+   "name": "planks",
+   "category": "materials",
+   "tags": [
+    "material"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "nails",
+   "name": "nails",
+   "category": "materials",
+   "tags": [
+    "material"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "clay",
+   "name": "clay",
+   "category": "materials",
+   "tags": [
+    "material"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "feather",
+   "name": "feather",
+   "category": "materials",
+   "tags": [
+    "material"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "kit_r",
+   "name": "kit_r",
+   "category": "materials",
+   "tags": [
+    "repair",
+    "crafted"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "mug_c",
+   "name": "mug_c",
+   "category": "materials",
+   "tags": [
+    "gift",
+    "crafted"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "bulb",
+   "name": "bulb",
+   "category": "materials",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "hammer",
+   "name": "hammer",
+   "category": "materials",
+   "tags": [
+    "tool"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "ladder",
+   "name": "ladder",
+   "category": "materials",
+   "tags": [
+    "tool"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "rod",
+   "name": "rod",
+   "category": "materials",
+   "tags": [
+    "tool"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "book_c",
+   "name": "book_c",
+   "category": "materials",
+   "tags": [
+    "key"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "key": true
+  },
+  {
+   "id": "smartphone",
+   "name": "smartphone",
+   "category": "materials",
+   "tags": [
+    "key"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "key": true
+  },
+  {
+   "id": "stool_c",
+   "name": "stool_c",
+   "category": "seating",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "actions": [
+    "sit"
+   ]
+  },
+  {
+   "id": "bench_c",
+   "name": "bench_c",
+   "category": "storage",
+   "tags": [
+    "workbench"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "lamp_c",
+   "name": "lamp_c",
+   "category": "lighting",
+   "tags": [
+    "light"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  }
+ ],
+ "kits": [
+  {
+   "id": "mats",
+   "items": [
+    "planks",
+    "planks",
+    "planks",
+    "nails",
+    "nails",
+    "nails",
+    "nails",
+    "clay",
+    "clay",
+    "hammer",
+    "bench_c",
+    "stool_c",
+    "lamp_c",
+    "bulb"
+   ]
+  },
+  {
+   "id": "book",
+   "items": [
+    "book_c"
+   ]
+  },
+  {
+   "id": "phone",
+   "items": [
+    "smartphone"
+   ]
+  },
+  {
+   "id": "ladder",
+   "items": [
+    "ladder"
+   ]
+  },
+  {
+   "id": "kits",
+   "items": [
+    "kit_r",
+    "kit_r"
+   ]
+  },
+  {
+   "id": "more",
+   "items": [
+    "planks",
+    "nails",
+    "nails"
+   ]
+  }
+ ],
+ "wear": [
+  {
+   "id": "seats",
+   "categories": [
+    "seating"
+   ],
+   "stages": [
+    20,
+    40,
+    60
+   ],
+   "per_use": 5,
+   "looks": [
+    "як новий",
+    "потертий",
+    "розхитаний",
+    "зламаний"
+   ],
+   "broken": "Сісти страшно",
+   "fix": 40,
+   "tools": [
+    "hammer"
+   ]
+  },
+  {
+   "id": "lights",
+   "tags": [
+    "light"
+   ],
+   "stages": [
+    10,
+    20,
+    30
+   ],
+   "per_use": 1,
+   "looks": [
+    "рівно",
+    "тьмяніє",
+    "блимає",
+    "перегоріла"
+   ],
+   "broken": "Лампочка перегоріла",
+   "fix": 20,
+   "tools": [
+    "ladder"
+   ],
+   "kit": "bulb"
+  }
+ ],
+ "crafts": [
+  {
+   "id": "c.kit",
+   "name": "Набір",
+   "needs": [
+    [
+     "nails",
+     2
+    ],
+    [
+     "planks",
+     1
+    ]
+   ],
+   "gives": [
+    "kit_r",
+    1
+   ],
+   "known": true,
+   "tools": [
+    "hammer"
+   ]
+  },
+  {
+   "id": "c.stool",
+   "name": "Табурет",
+   "needs": [
+    [
+     "planks",
+     2
+    ],
+    [
+     "nails",
+     2
+    ]
+   ],
+   "gives": [
+    "stool_c",
+    1
+   ],
+   "known": true,
+   "tools": [
+    "hammer"
+   ]
+  },
+  {
+   "id": "c.mug",
+   "name": "Горнятко",
+   "needs": [
+    [
+     "clay",
+     2
+    ]
+   ],
+   "gives": [
+    "mug_c",
+    1
+   ]
+  },
+  {
+   "id": "c.book",
+   "name": "З книжки",
+   "needs": [
+    [
+     "feather",
+     1
+    ]
+   ],
+   "gives": [
+    "mug_c",
+    1
+   ],
+   "learn": {
+    "items": [
+     "book_c"
+    ],
+    "hint": ""
+   }
+  }
+ ],
+ "tools": [
+  {
+   "item": "hammer",
+   "uses": 3,
+   "gone": "Молоток зламався"
+  },
+  {
+   "item": "ladder",
+   "uses": 5,
+   "gone": "Драбина тріснула"
+  },
+  {
+   "item": "rod",
+   "uses": 9,
+   "gone": "Вудка зламалася"
+  }
+ ],
+ "pocket": 30
+}

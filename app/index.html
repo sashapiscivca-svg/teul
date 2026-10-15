@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1119" />
+    <title>teul</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <style>
+      html, body { margin: 0; height: 100%; background: #0e0f1f; }
+      #boot { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #0e0f1f; color: #a3a8cf; font: 500 15px 'Pixelify Sans', ui-monospace, monospace; transition: opacity 0.35s steps(3); }
+      #boot .boot-name { font-size: 64px; font-weight: 700; color: #ffe7b0; text-shadow: 0 4px 0 #c47a22, 0 8px 0 #3a1e08; letter-spacing: 0.04em; }
+      #boot .boot-bar { width: 220px; height: 14px; background: #1b1d3a; box-shadow: 0 0 0 2px #0b0c18, inset 0 0 0 2px #2d3160; }
+      #boot .boot-bar i { display: block; height: 100%; width: 4%; background: #f6b347; box-shadow: inset 0 -3px 0 #c47a22; transition: width 0.25s steps(4); }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+      <div id="boot" role="status" aria-live="polite">
+        <b class="boot-name">teul</b>
+        <div class="boot-bar"><i></i></div>
+        <span class="boot-step">…</span>
+      </div>
+      <div id="rotate" role="alert"><span></span></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

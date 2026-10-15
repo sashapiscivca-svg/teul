@@ -1,0 +1,342 @@
+{
+ "schema": 1,
+ "id": "style",
+ "version": 1,
+ "items": [
+  {
+   "id": "scarf_red",
+   "name": "item.scarf_red",
+   "category": "clothes",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": {
+    "coins": 20
+   },
+   "hidden": true,
+   "unique": true,
+   "wear": {
+    "slot": "acc",
+    "set": [
+     [
+      "look.acc",
+      "2"
+     ],
+     [
+      "look.acc_color",
+      "#d9534f"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "coat_navy",
+   "name": "item.coat_navy",
+   "category": "clothes",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": {
+    "coins": 90
+   },
+   "hidden": true,
+   "unique": true,
+   "wear": {
+    "slot": "top",
+    "set": [
+     [
+      "look.top",
+      "9"
+     ],
+     [
+      "look.top_color",
+      "#2f3a5a"
+     ],
+     [
+      "look.top2_color",
+      "#e8e0c8"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "boots_brown",
+   "name": "item.boots_brown",
+   "category": "clothes",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": {
+    "coins": 40
+   },
+   "hidden": true,
+   "unique": true,
+   "wear": {
+    "slot": "shoes",
+    "set": [
+     [
+      "look.shoe",
+      "1"
+     ],
+     [
+      "look.shoes_color",
+      "#8a5a2e"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "wardrobe_s",
+   "name": "item.wardrobe_s",
+   "category": "storage",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "tags": [
+    "wardrobe"
+   ]
+  },
+  {
+   "id": "house_s",
+   "name": "item.house_s",
+   "category": "village",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "flat_s",
+   "name": "item.flat_s",
+   "category": "village",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plot_sign",
+   "name": "item.plot_sign",
+   "category": "village",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "mirror_s",
+   "name": "item.mirror_s",
+   "category": "village",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "hidden": true
+  }
+ ],
+ "locations": [
+  {
+   "id": "shop_in",
+   "name": "Крамниця одягу",
+   "w": 6,
+   "h": 4,
+   "tiles": [
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "props": [
+    {
+     "item": "mirror_s",
+     "x": 1,
+     "y": 1
+    }
+   ]
+  },
+  {
+   "id": "salon_in",
+   "name": "Перукарня",
+   "w": 6,
+   "h": 4,
+   "tiles": [
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "props": [
+    {
+     "item": "mirror_s",
+     "x": 1,
+     "y": 1
+    }
+   ]
+  },
+  {
+   "id": "town",
+   "name": "Містечко",
+   "w": 8,
+   "h": 6,
+   "tiles": [
+    "gggggggg",
+    "gggggggg",
+    "gggggggg",
+    "gggggggg",
+    "gggggggg",
+    "gggggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "props": [
+    {
+     "item": "house_s",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "item": "flat_s",
+     "x": 4,
+     "y": 1
+    },
+    {
+     "item": "house_s",
+     "x": 1,
+     "y": 4
+    }
+   ]
+  },
+  {
+   "id": "plots",
+   "name": "Ділянки",
+   "w": 6,
+   "h": 4,
+   "tiles": [
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "props": [
+    {
+     "item": "plot_sign",
+     "x": 2,
+     "y": 2
+    }
+   ]
+  }
+ ],
+ "fashion": {
+  "shop": "shop_in",
+  "shop_hours": [
+   9,
+   19
+  ],
+  "fitting": [
+   "shop_in"
+  ],
+  "salon": "salon_in",
+  "salon_hours": [
+   9,
+   18
+  ],
+  "price_style": 40,
+  "price_color": 25,
+  "price_beard": 15
+ },
+ "homes": [
+  {
+   "id": "home.main",
+   "name": "Дім на Липовій",
+   "location": "town",
+   "prop": "house_s",
+   "x": 1,
+   "y": 3,
+   "kind": "house",
+   "start": true
+  },
+  {
+   "id": "flat.1",
+   "name": "Квартира на Садовій",
+   "location": "town",
+   "prop": "flat_s",
+   "x": 4,
+   "y": 3,
+   "kind": "flat",
+   "rent": 50
+  },
+  {
+   "id": "house.2",
+   "name": "Будиночок з садом",
+   "location": "town",
+   "prop": "house_s",
+   "x": 1,
+   "y": 5,
+   "kind": "house",
+   "price": 250
+  },
+  {
+   "id": "plot.1",
+   "name": "Ділянка біля поля",
+   "location": "plots",
+   "prop": "plot_sign",
+   "x": 2,
+   "y": 3,
+   "kind": "plot",
+   "rent": 10
+  }
+ ],
+ "stations": [
+  {
+   "id": "st.plot.dig",
+   "location": "plots",
+   "prop": "plot_sign",
+   "label": "Скопати грядку",
+   "text": "Земля пухка.",
+   "gives": [
+    [
+     "pebble",
+     1
+    ]
+   ],
+   "per_day": 1,
+   "kind": "gather",
+   "requires": {
+    "leased": [
+     "plot.1"
+    ],
+    "hint": "Це чужа ділянка."
+   }
+  }
+ ]
+}

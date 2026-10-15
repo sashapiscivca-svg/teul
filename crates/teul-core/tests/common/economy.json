@@ -1,0 +1,629 @@
+{
+  "schema": 1,
+  "id": "economy",
+  "version": 1,
+  "start_coins": 50,
+  "pocket": 3,
+  "items": [
+    {
+      "id": "mushroom",
+      "name": "item.mushroom",
+      "category": "nature",
+      "tags": [
+        "food"
+      ],
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "carry": true
+    },
+    {
+      "id": "yarn",
+      "name": "item.yarn",
+      "category": "goods",
+      "tags": [
+        "wool"
+      ],
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "carry": true
+    },
+    {
+      "id": "bread",
+      "name": "item.bread",
+      "category": "food",
+      "tags": [
+        "food"
+      ],
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "carry": true
+    },
+    {
+      "id": "perch",
+      "name": "item.perch",
+      "category": "fish",
+      "tags": [
+        "fish"
+      ],
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "carry": true
+    },
+    {
+      "id": "pouch",
+      "name": "item.pouch",
+      "category": "goods",
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "bag": 4
+    },
+    {
+      "id": "backpack",
+      "name": "item.backpack",
+      "category": "goods",
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "bag": 6
+    },
+    {
+      "id": "miner_lantern",
+      "name": "item.miner_lantern",
+      "category": "key",
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "key": true
+    },
+    {
+      "id": "counter",
+      "name": "item.counter",
+      "category": "village",
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "floor",
+      "acquire": "free",
+      "hidden": true
+    },
+    {
+      "id": "teapot",
+      "name": "item.teapot",
+      "category": "kitchen",
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": {
+        "coins": 10
+      }
+    },
+    {
+      "id": "helmet",
+      "name": "item.helmet",
+      "category": "goods",
+      "tags": [
+        "armor"
+      ],
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "carry": true,
+      "armor": {
+        "slot": "head",
+        "defense": 2
+      }
+    },
+    {
+      "id": "plate",
+      "name": "item.plate",
+      "category": "goods",
+      "tags": [
+        "armor"
+      ],
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "carry": true,
+      "armor": {
+        "slot": "body",
+        "defense": 3
+      }
+    },
+    {
+      "id": "cap",
+      "name": "item.cap",
+      "category": "goods",
+      "tags": [
+        "armor"
+      ],
+      "footprint": {
+        "w": 1,
+        "d": 1
+      },
+      "layer": "surface",
+      "acquire": "free",
+      "hidden": true,
+      "carry": true,
+      "armor": {
+        "slot": "head",
+        "defense": 1
+      }
+    }
+  ],
+  "locations": [
+    {
+      "id": "village",
+      "name": "Село",
+      "w": 6,
+      "h": 4,
+      "tiles": [
+        "gggggg",
+        "gggggg",
+        "gggggg",
+        "gggggg"
+      ],
+      "legend": {
+        "g": "floor.oak"
+      },
+      "props": [
+        {
+          "item": "counter",
+          "x": 3,
+          "y": 1
+        }
+      ],
+      "places": [
+        {
+          "id": "square",
+          "name": "Площа",
+          "x": 1,
+          "y": 1,
+          "w": 3,
+          "h": 2,
+          "activity": "chat"
+        }
+      ],
+      "entry": [
+        0,
+        0
+      ],
+      "exits": [
+        {
+          "x": 5,
+          "y": 0,
+          "w": 1,
+          "h": 1,
+          "to": "cave",
+          "at": [
+            0,
+            0
+          ]
+        }
+      ],
+      "spots": [
+        {
+          "id": "shroom",
+          "x": 1,
+          "y": 1,
+          "gives": [
+            {
+              "item": "mushroom"
+            }
+          ]
+        },
+        {
+          "id": "shroom2",
+          "x": 2,
+          "y": 1,
+          "gives": [
+            {
+              "item": "mushroom"
+            }
+          ]
+        },
+        {
+          "id": "shroom3",
+          "x": 2,
+          "y": 2,
+          "gives": [
+            {
+              "item": "mushroom"
+            }
+          ]
+        },
+        {
+          "id": "shroom4",
+          "x": 3,
+          "y": 2,
+          "gives": [
+            {
+              "item": "mushroom"
+            }
+          ]
+        }
+      ],
+      "fishing": [
+        {
+          "id": "pond",
+          "name": "Ставок",
+          "x": 4,
+          "y": 3,
+          "w": 2,
+          "h": 1,
+          "fish": [
+            {
+              "item": "perch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cave",
+      "name": "Печера",
+      "w": 4,
+      "h": 4,
+      "underground": true,
+      "tiles": [
+        "rrrr",
+        "rrrr",
+        "rrrr",
+        "rrrr"
+      ],
+      "legend": {
+        "r": "floor.oak"
+      },
+      "requires": {
+        "items": [
+          "miner_lantern"
+        ],
+        "hint": "Без ліхтаря там нічого не видно."
+      },
+      "props": [
+        {
+          "item": "counter",
+          "x": 2,
+          "y": 2
+        }
+      ],
+      "spots": [
+        {
+          "id": "crystal",
+          "x": 1,
+          "y": 1,
+          "gives": [
+            {
+              "item": "yarn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "farm",
+      "name": "Ферма",
+      "w": 4,
+      "h": 4,
+      "tiles": [
+        "gggg",
+        "gggg",
+        "gggg",
+        "gggg"
+      ],
+      "legend": {
+        "g": "floor.oak"
+      },
+      "props": [
+        {
+          "item": "counter",
+          "x": 1,
+          "y": 1
+        }
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "olia",
+      "name": "Оля",
+      "home": "square",
+      "routine": [],
+      "likes": [
+        "food"
+      ],
+      "gifts": [
+        {
+          "hearts": 0,
+          "item": "bread"
+        }
+      ],
+      "asks": [
+        {
+          "text": "Принеси гриб",
+          "items": [
+            [
+              "mushroom",
+              1
+            ]
+          ],
+          "coins": 20,
+          "thanks": "Дякую!"
+        }
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "st.farm.shear",
+      "location": "farm",
+      "prop": "counter",
+      "label": "Постригти вівцю",
+      "text": "Вовна м'яка.",
+      "gives": [
+        [
+          "yarn",
+          1
+        ]
+      ],
+      "per_day": 2,
+      "kind": "gather"
+    },
+    {
+      "id": "st.farm.sell",
+      "location": "farm",
+      "prop": "counter",
+      "label": "Продати гриби",
+      "text": "Дякуємо!",
+      "needs": [
+        [
+          "#food",
+          1
+        ]
+      ],
+      "earn": 5,
+      "per_day": 2,
+      "kind": "sell"
+    },
+    {
+      "id": "st.farm.pouch",
+      "location": "farm",
+      "prop": "counter",
+      "label": "Купити торбинку",
+      "text": "Сплетена з вовни.",
+      "needs": [
+        [
+          "yarn",
+          1
+        ]
+      ],
+      "cost": 20,
+      "gives": [
+        [
+          "pouch",
+          1
+        ]
+      ],
+      "per_day": 1,
+      "kind": "buy"
+    },
+    {
+      "id": "st.village.buyer",
+      "location": "village",
+      "prop": "counter",
+      "label": "Скупка",
+      "text": "Скупник рахує монети.",
+      "per_day": 3,
+      "hours": [
+        8,
+        17
+      ],
+      "kind": "sell",
+      "buys": [
+        [
+          "#fish",
+          4
+        ],
+        [
+          "mushroom",
+          0
+        ],
+        [
+          "*",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "st.village.bakery",
+      "location": "village",
+      "prop": "counter",
+      "label": "Купити хліб",
+      "text": "Тепла паляниця.",
+      "cost": 3,
+      "gives": [
+        [
+          "bread",
+          1
+        ]
+      ],
+      "per_day": 5,
+      "hours": [
+        6,
+        20
+      ],
+      "kind": "buy"
+    },
+    {
+      "id": "st.cave.dig",
+      "location": "cave",
+      "prop": "counter",
+      "label": "Копати",
+      "text": "…",
+      "gives": [
+        [
+          "yarn",
+          1
+        ]
+      ],
+      "per_day": 1,
+      "kind": "gather",
+      "requires": {
+        "helped": [
+          "help.second"
+        ],
+        "hint": "Спершу допоможи вдруге."
+      }
+    },
+    {
+      "id": "st.village.smith",
+      "location": "village",
+      "prop": "counter",
+      "label": "Купити шолом",
+      "text": "Шолом.",
+      "cost": 5,
+      "gives": [
+        [
+          "helmet",
+          1
+        ]
+      ],
+      "per_day": 5,
+      "kind": "buy"
+    },
+    {
+      "id": "st.village.smith2",
+      "location": "village",
+      "prop": "counter",
+      "label": "Купити нагрудник",
+      "text": "Нагрудник.",
+      "cost": 5,
+      "gives": [
+        [
+          "plate",
+          1
+        ]
+      ],
+      "per_day": 5,
+      "kind": "buy"
+    },
+    {
+      "id": "st.village.smith3",
+      "location": "village",
+      "prop": "counter",
+      "label": "Купити шапку",
+      "text": "Шапка.",
+      "cost": 2,
+      "gives": [
+        [
+          "cap",
+          1
+        ]
+      ],
+      "per_day": 5,
+      "kind": "buy"
+    }
+  ],
+  "helps": [
+    {
+      "id": "help.miner",
+      "giver": "olia",
+      "giver_name": "Оля",
+      "location": "village",
+      "title": "Ліхтар",
+      "text": "Принеси два гриби.",
+      "needs": [
+        [
+          "mushroom",
+          2
+        ]
+      ],
+      "coins": 40,
+      "gives": [
+        "miner_lantern"
+      ],
+      "thanks": "Тримай ліхтар!"
+    },
+    {
+      "id": "help.second",
+      "giver": "olia",
+      "giver_name": "Оля",
+      "location": "village",
+      "title": "Ще раз",
+      "text": "Ще гриб.",
+      "needs": [
+        [
+          "mushroom",
+          1
+        ]
+      ],
+      "after": [
+        "help.miner"
+      ],
+      "coins": 10,
+      "gives": [
+        "backpack"
+      ],
+      "thanks": "Ось рюкзак."
+    }
+  ],
+  "interviews": [
+    {
+      "q": "Як вам осінь у Липовому?",
+      "answers": [
+        "Найкраща пора!",
+        "Холодно, але гарно"
+      ]
+    },
+    {
+      "q": "Що б ви змінили в селі?",
+      "answers": [
+        "Більше лавок",
+        "Нічого"
+      ]
+    }
+  ]
+}

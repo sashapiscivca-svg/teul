@@ -1,0 +1,285 @@
+{
+ "schema": 1,
+ "id": "test",
+ "version": 1,
+ "start_coins": 0,
+ "start_room": {
+  "rect": {
+   "x": 0,
+   "y": 0,
+   "w": 6,
+   "h": 6
+  },
+  "cell_price": 5
+ },
+ "start_styles": {
+  "floor": "floor.oak",
+  "wall": "wall.plum"
+ },
+ "palettes": {
+  "fabric": [
+   "#3f8c94",
+   "#d9534f",
+   "#e8a23a"
+  ]
+ },
+ "items": [
+  {
+   "id": "sofa",
+   "name": "item.sofa",
+   "category": "seating",
+   "footprint": {
+    "w": 3,
+    "d": 1
+   },
+   "layer": "floor",
+   "model": [
+    {
+     "box": [
+      0,
+      0,
+      0,
+      300,
+      100,
+      40
+     ],
+     "slot": "body"
+    }
+   ],
+   "slots": {
+    "body": {
+     "default": "#3f8c94",
+     "palette": "fabric"
+    }
+   },
+   "actions": [
+    "sit"
+   ],
+   "acquire": "free"
+  },
+  {
+   "id": "table",
+   "name": "item.table",
+   "category": "tables",
+   "footprint": {
+    "w": 2,
+    "d": 2
+   },
+   "layer": "floor",
+   "rules": {
+    "provides_surface": true
+   },
+   "acquire": "free"
+  },
+  {
+   "id": "cup",
+   "name": "item.cup",
+   "category": "decor",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free"
+  },
+  {
+   "id": "painting",
+   "name": "item.painting",
+   "category": "wall",
+   "footprint": {
+    "w": 2,
+    "d": 1
+   },
+   "layer": "wall",
+   "acquire": "free"
+  },
+  {
+   "id": "gold_lamp",
+   "name": "item.gold_lamp",
+   "category": "lighting",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": {
+    "coins": 50
+   }
+  },
+  {
+   "id": "plant",
+   "name": "item.plant",
+   "category": "plants",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "actions": [
+    "water"
+   ],
+   "acquire": "free"
+  },
+  {
+   "id": "vase",
+   "name": "item.vase",
+   "category": "decor",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": {
+    "action": {
+     "kind": "water",
+     "count": 3
+    }
+   }
+  },
+  {
+   "id": "rare_clock",
+   "name": "item.rare_clock",
+   "category": "decor",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": {
+    "all": [
+     {
+      "token": {
+       "kind": "leaf",
+       "n": 2
+      }
+     },
+     {
+      "coins": 10
+     }
+    ]
+   }
+  },
+  {
+   "id": "rug",
+   "name": "item.rug",
+   "category": "rugs",
+   "footprint": {
+    "w": 2,
+    "d": 2
+   },
+   "layer": "rug",
+   "acquire": "free"
+  },
+  {
+   "id": "portal",
+   "name": "item.portal",
+   "category": "wall",
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "wall",
+   "unique": true,
+   "acquire": "free"
+  }
+ ],
+ "styles": [
+  {
+   "id": "floor.oak",
+   "kind": "floor",
+   "name": "s.oak",
+   "params": {
+    "color": "#c28f5c"
+   },
+   "acquire": "free"
+  },
+  {
+   "id": "floor.stone",
+   "kind": "floor",
+   "name": "s.stone",
+   "params": {
+    "color": "#8a8a96"
+   },
+   "acquire": {
+    "coins": 80
+   }
+  },
+  {
+   "id": "wall.plum",
+   "kind": "wall",
+   "name": "s.plum",
+   "params": {
+    "color": "#6a5688"
+   },
+   "acquire": "free"
+  }
+ ],
+ "actions": [
+  {
+   "id": "sit",
+   "name": "a.sit",
+   "minutes": 10
+  },
+  {
+   "id": "water",
+   "name": "a.water",
+   "minutes": 2
+  }
+ ],
+ "rewards": [
+  {
+   "action": "water",
+   "coins": 30,
+   "per_day_cap": 2
+  },
+  {
+   "action": "sit",
+   "token": {
+    "kind": "leaf",
+    "n": 1
+   },
+   "per_day_cap": 1
+  }
+ ],
+ "expansions": [
+  {
+   "id": "exp.1",
+   "name": "e.1",
+   "area": 12,
+   "acquire": {
+    "coins": 100
+   }
+  }
+ ],
+ "materials": [
+  {
+   "id": "gloss",
+   "name": "m.gloss",
+   "kind": "gloss"
+  },
+  {
+   "id": "stripes",
+   "name": "m.stripes",
+   "kind": "pattern",
+   "params": {
+    "pattern": "stripes"
+   }
+  }
+ ],
+ "themes": [
+  {
+   "id": "theme.cozy",
+   "name": "t.cozy",
+   "styles": {
+    "floor": "floor.stone",
+    "wall": "wall.plum"
+   },
+   "settings": {
+    "ambient_color": "#ffd9a0"
+   },
+   "acquire": {
+    "coins": 150
+   }
+  }
+ ]
+}

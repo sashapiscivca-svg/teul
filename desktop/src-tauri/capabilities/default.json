@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "The one window: core window events only. The app's own commands (secret_get, secret_set, secret_delete, save_file, open_file, set_fullscreen, exit_app) are allowed by default; no file system or shell access is given to the page.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

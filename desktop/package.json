@@ -1,0 +1,18 @@
+{
+  "name": "teul-desktop",
+  "private": true,
+  "version": "1.0.0",
+  "license": "AGPL-3.0-or-later",
+  "description": "teul for Windows and Linux (Tauri v2 around the built web app in ../app/dist)",
+  "scripts": {
+    "tauri": "tauri",
+    "web": "npm --prefix ../app run build",
+    "build:linux": "tauri build --bundles deb,appimage",
+    "build:windows": "npm run web && tauri build --bundles nsis,msi",
+    "build:windows:cross": "tauri build --runner cargo-xwin --target x86_64-pc-windows-msvc --bundles nsis",
+    "dev": "tauri dev"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.2"
+  }
+}

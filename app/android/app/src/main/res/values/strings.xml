@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">teul</string>
+    <string name="title_activity_main">teul</string>
+    <string name="package_name">com.teul.app</string>
+    <string name="custom_url_scheme">com.teul.app</string>
+</resources>

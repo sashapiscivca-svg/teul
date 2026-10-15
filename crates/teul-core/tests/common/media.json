@@ -1,0 +1,130 @@
+{
+ "schema": 1,
+ "id": "media",
+ "version": 1,
+ "items": [
+  {
+   "id": "violin_m",
+   "name": "item.violin_m",
+   "category": "music",
+   "tags": [
+    "instrument",
+    "portable"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "sheet_ode",
+   "name": "item.sheet_ode",
+   "category": "goods",
+   "tags": [
+    "sheet"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "carry": true,
+   "hidden": true
+  },
+  {
+   "id": "pc_m",
+   "name": "item.pc_m",
+   "category": "office",
+   "tags": [
+    "printer"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "gramophone_m",
+   "name": "item.gramophone_m",
+   "category": "music",
+   "tags": [
+    "music",
+    "switch"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "rec_m",
+   "name": "item.rec_m",
+   "category": "goods",
+   "tags": [
+    "record"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  }
+ ],
+ "pieces": [
+  {
+   "id": "lullaby",
+   "name": "Колискова",
+   "by": "Брамс",
+   "level": 0
+  },
+  {
+   "id": "ode",
+   "name": "Ода до радості",
+   "by": "Бетховен",
+   "sheet": "sheet_ode",
+   "level": 1
+  }
+ ],
+ "stations": [
+  {
+   "id": "st.sheet_ode",
+   "location": "bazaar",
+   "prop": "stall_w",
+   "label": "Купити ноти",
+   "cost": 2,
+   "gives": [
+    [
+     "sheet_ode",
+     1
+    ]
+   ],
+   "kind": "buy",
+   "days": "daily"
+  },
+  {
+   "id": "st.rec_m",
+   "location": "bazaar",
+   "prop": "stall_w",
+   "label": "Купити платівку",
+   "cost": 3,
+   "gives": [
+    [
+     "rec_m",
+     1
+    ]
+   ],
+   "kind": "buy",
+   "days": "daily"
+  }
+ ]
+}

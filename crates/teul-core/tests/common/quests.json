@@ -1,0 +1,74 @@
+{
+  "schema": 1, "id": "quests", "version": 1,
+  "items": [
+    { "id": "parcel", "name": "item.parcel", "category": "goods", "tags": ["post"], "footprint": { "w": 1, "d": 1 }, "layer": "surface", "acquire": "free", "hidden": true, "carry": true },
+    { "id": "medicine", "name": "item.medicine", "category": "goods", "tags": ["medicine"], "footprint": { "w": 1, "d": 1 }, "layer": "surface", "acquire": "free", "hidden": true, "carry": true }
+  ],
+  "stations": [
+    { "id": "st.village.fair", "location": "village", "prop": "counter", "label": "Ярмарок", "gives": [["bread", 1]], "cost": 1, "kind": "buy", "days": "halloween" },
+    { "id": "st.village.weekday", "location": "village", "prop": "counter", "label": "Пошта", "kind": "read", "days": "weekdays" }
+  ],
+  "quests": [
+    {
+      "id": "q.story", "title": "Пряжа для Олі", "giver": "olia", "giver_name": "Оля", "offer": "village",
+      "intro": "Оля в'яже шарф і просить допомогти.",
+      "stages": [
+        { "text": "Сходи на ферму зранку", "act": { "do": "go", "location": "farm", "hours": [6, 12] } },
+        { "text": "Постриж вівцю", "act": { "do": "use", "station": "st.farm.shear" } },
+        { "text": "Принеси Олі пряжу", "who": "olia", "act": { "do": "bring", "location": "village", "items": [["yarn", 1]] }, "gives": [["parcel", 1]] },
+        { "text": "Що зробити з посилкою?", "act": { "do": "choose", "location": "village", "options": [
+          { "label": "Віднести сусідці", "text": "Сусідка зраділа.", "reward": { "rep": 2 } },
+          { "label": "Залишити собі", "text": "Ну що ж.", "reward": { "items": ["bread"] }, "goto": 4 }
+        ] } },
+        { "text": "Почекай до завтра", "act": { "do": "wait", "days": 1 } }
+      ],
+      "reward": { "coins": 20, "items": ["bread"], "title": "Друг Олі", "rep": 3, "hearts": [["olia", 50]] },
+      "bye": "Дякую!"
+    },
+    {
+      "id": "q.after", "title": "Друга справа", "giver": "olia", "giver_name": "Оля", "offer": "village", "intro": "Ще одне.",
+      "after": ["q.story"],
+      "stages": [{ "text": "Збери гриб у селі", "act": { "do": "gather", "location": "village" } }],
+      "reward": { "coins": 5 }
+    },
+    {
+      "id": "q.halloween", "kind": "calendar", "title": "Гарбузовий вечір", "giver": "olia", "giver_name": "Оля", "offer": "village",
+      "intro": "Свято наближається.", "when": { "holiday": "halloween", "before": 3 },
+      "stages": [{ "text": "Прийди на площу ввечері", "act": { "do": "go", "location": "village", "hours": [18, 24] } }],
+      "reward": { "coins": 10 }
+    },
+    {
+      "id": "q.october", "kind": "calendar", "title": "Жовтневі гриби", "giver": "board", "giver_name": "Дошка оголошень", "offer": "village",
+      "intro": "Гриби пішли.", "when": { "from": [10, 1], "to": [10, 15] },
+      "stages": [{ "text": "Збери гриб", "act": { "do": "gather", "location": "village" } }],
+      "reward": { "coins": 4 }
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job.parcels", "title": "Посилки для сусідів", "text": "{giver} просить рознести посилки: {t1} і {t2}.",
+      "giver": "olia", "location": "village", "start_gives": [["parcel", 2]],
+      "stages": [
+        { "text": "Віднеси посилку: {t1}", "act": { "do": "bring", "location": "village", "items": [["parcel", 1]] } },
+        { "text": "Віднеси посилку на ферму: {t2}", "act": { "do": "bring", "location": "farm", "items": [["parcel", 1]] } }
+      ],
+      "reward": { "coins": 8, "rep": 1 }, "days": 2, "weight": 10
+    },
+    {
+      "id": "job.mushrooms", "title": "Грибочки на юшку", "text": "{giver} мріє про грибну юшку.",
+      "giver": "olia", "location": "village",
+      "stages": [{ "text": "Збери гриб", "act": { "do": "gather", "location": "village" } }],
+      "reward": { "coins": 5 }, "days": 1, "weight": 10
+    },
+    {
+      "id": "job.rain", "title": "Парасолька", "text": "Дощ!", "giver": "olia", "location": "village", "weather": ["rain", "storm"],
+      "stages": [{ "text": "Зайди на ферму", "act": { "do": "go", "location": "farm" } }],
+      "reward": { "coins": 3 }, "days": 1, "weight": 50
+    },
+    {
+      "id": "job.sick", "title": "Ліки для {who}", "text": "{who} захворів(ла).", "giver": "olia", "location": "village", "needs_ill": true,
+      "stages": [{ "text": "Принеси ліки", "act": { "do": "go", "location": "village" } }],
+      "reward": { "coins": 6 }, "days": 1, "weight": 50
+    }
+  ]
+}

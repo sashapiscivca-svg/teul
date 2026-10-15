@@ -1,0 +1,48 @@
+{
+  "schema": 1, "id": "home", "version": 1,
+  "start_coins": 300,
+  "pocket": 4,
+  "items": [
+    { "id": "eggs", "name": "item.eggs", "category": "food", "tags": ["food"], "footprint": { "w": 1, "d": 1 }, "layer": "surface", "acquire": "free", "hidden": true, "carry": true },
+    { "id": "milk", "name": "item.milk", "category": "food", "tags": ["food", "drink"], "footprint": { "w": 1, "d": 1 }, "layer": "surface", "acquire": "free", "hidden": true, "carry": true },
+    { "id": "omelette", "name": "item.omelette", "category": "food", "tags": ["food", "dish"], "footprint": { "w": 1, "d": 1 }, "layer": "surface", "acquire": "free", "hidden": true, "carry": true },
+    { "id": "pebble", "name": "item.pebble", "category": "nature", "footprint": { "w": 1, "d": 1 }, "layer": "surface", "acquire": "free", "hidden": true, "carry": true },
+    { "id": "fridge_h", "name": "item.fridge", "category": "kitchen", "tags": ["fridge", "power"], "footprint": { "w": 1, "d": 1 }, "layer": "floor", "acquire": "free" },
+    { "id": "stove_h", "name": "item.stove", "category": "kitchen", "tags": ["stove", "gas"], "footprint": { "w": 1, "d": 1 }, "layer": "floor", "acquire": "free" },
+    { "id": "tub_h", "name": "item.bathtub", "category": "bath", "tags": ["water"], "footprint": { "w": 1, "d": 1 }, "layer": "floor", "acquire": "free", "actions": ["rest"] },
+    { "id": "radio_h", "name": "item.radio", "category": "decor", "tags": ["power", "switch"], "footprint": { "w": 1, "d": 1 }, "layer": "floor", "acquire": "free", "actions": ["listen"] },
+    { "id": "pay_counter", "name": "item.counter", "category": "village", "footprint": { "w": 1, "d": 1 }, "layer": "floor", "acquire": "free", "hidden": true }
+  ],
+  "actions": [
+    { "id": "rest", "name": "action.rest", "minutes": 10 },
+    { "id": "listen", "name": "action.listen", "minutes": 10 }
+  ],
+  "locations": [
+    { "id": "market", "name": "Ринок", "w": 6, "h": 4,
+      "tiles": ["gggggg", "gggggg", "gggggg", "gggggg"], "legend": { "g": "floor.oak" },
+      "entry": [0, 0],
+      "spots": [
+        { "id": "hen1", "x": 1, "y": 1, "gives": [{ "item": "eggs" }] },
+        { "id": "hen2", "x": 2, "y": 1, "gives": [{ "item": "eggs" }] },
+        { "id": "hen3", "x": 3, "y": 1, "gives": [{ "item": "eggs" }] },
+        { "id": "cow1", "x": 1, "y": 2, "gives": [{ "item": "milk" }] },
+        { "id": "cow2", "x": 2, "y": 2, "gives": [{ "item": "milk" }] },
+        { "id": "stone", "x": 3, "y": 2, "gives": [{ "item": "pebble" }] }
+      ] },
+    { "id": "utility_in", "name": "Комунальна контора", "w": 6, "h": 4,
+      "tiles": ["gggggg", "gggggg", "gggggg", "gggggg"], "legend": { "g": "floor.oak" },
+      "props": [{ "item": "pay_counter", "x": 3, "y": 1 }] }
+  ],
+  "recipes": [
+    { "id": "rc.omelette", "name": "Омлет", "needs": [["eggs", 2], ["milk", 1]], "gives": ["omelette", 1] }
+  ],
+  "bills": {
+    "office": "utility_in", "hours": [8, 17], "due_day": 10,
+    "utilities": [
+      { "id": "garbage", "name": "Вивіз сміття", "monthly": 10 },
+      { "id": "water", "name": "Вода", "monthly": 15 },
+      { "id": "power", "name": "Електрика", "monthly": 20, "winter": 10 },
+      { "id": "gas", "name": "Газ", "monthly": 10, "winter": 20 }
+    ]
+  }
+}

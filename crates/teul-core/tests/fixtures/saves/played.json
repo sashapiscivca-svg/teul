@@ -1,0 +1,1959 @@
+{
+ "kind": "teul-world",
+ "format": 2,
+ "app": "1.0.0",
+ "made": "2026-10-11T12:00:00.000Z",
+ "world": {
+  "meta": {
+   "device": 2002,
+   "seed": 11,
+   "epochUnixSecs": 1791579600,
+   "secret": 200200014014,
+   "idSeed": "2222222222222222222222222222222222222222222222222222222222222222",
+   "format": 2,
+   "content": "base@1",
+   "app": "1.0.0"
+  },
+  "events": [
+   {
+    "id": {
+     "device": 2002,
+     "seq": 0
+    },
+    "time": 542,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "name_player",
+      "name": "Тарас"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2076907813048736
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 1
+    },
+    "time": 542,
+    "rules_version": 2,
+    "kind": {
+     "type": "PlayerNamed",
+     "name": "Тарас"
+    },
+    "chain": 1389538105755300
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 2
+    },
+    "time": 544,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "make_hero",
+      "set": [
+       [
+        "look.hair",
+        "5"
+       ],
+       [
+        "look.skin_color",
+        "#c98f65"
+       ]
+      ]
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1487047509469627
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 3
+    },
+    "time": 544,
+    "rules_version": 2,
+    "kind": {
+     "type": "HeroMade",
+     "set": [
+      [
+       "look.hair",
+       "5"
+      ],
+      [
+       "look.skin_color",
+       "#c98f65"
+      ]
+     ]
+    },
+    "chain": 2029892948609520
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 4
+    },
+    "time": 546,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "claim_kit",
+      "kit": "kit.house"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 227807947359383
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 5
+    },
+    "time": 546,
+    "rules_version": 2,
+    "kind": {
+     "type": "KitClaimed",
+     "kit": "kit.house",
+     "items": [
+      "door_basic",
+      "door_basic",
+      "door_basic",
+      "door_basic",
+      "door_garden",
+      "garden_gate",
+      "fence_picket",
+      "fence_picket",
+      "fence_picket",
+      "fence_picket",
+      "fence_picket",
+      "fence_picket",
+      "fence_picket",
+      "fence_picket",
+      "counter",
+      "counter_sink",
+      "stove",
+      "fridge",
+      "round_dining",
+      "dining_chair_wood",
+      "dining_chair_wood",
+      "bed",
+      "nightstand",
+      "wardrobe",
+      "rug_small",
+      "bathtub",
+      "toilet",
+      "washbasin",
+      "bath_mat",
+      "tree_apple",
+      "pond",
+      "garden_bench",
+      "flower_bed",
+      "bush_round",
+      "bush_flowering",
+      "bed_tomatoes",
+      "scarecrow",
+      "compost_bin",
+      "garden_plot",
+      "garden_plot",
+      "garden_plot",
+      "garden_plot",
+      "garden_plot",
+      "garden_plot",
+      "lemon_tree",
+      "orange_tree",
+      "wicker_chair",
+      "orchid_stand",
+      "potting_bench",
+      "garden_tub",
+      "garden_tub",
+      "sofa3",
+      "armchair",
+      "coffee_table",
+      "rug_big",
+      "tv_stand",
+      "tv",
+      "bookshelf",
+      "floor_lamp",
+      "monstera",
+      "ficus",
+      "painting_wide",
+      "wall_lamp",
+      "book_stack",
+      "vase",
+      "window_basic",
+      "counter_drawers",
+      "wall_cabinet",
+      "wall_cabinet",
+      "kettle",
+      "fruit_bowl",
+      "herb_pots",
+      "wall_clock",
+      "window_basic",
+      "plate_stack",
+      "nightstand",
+      "table_lamp",
+      "table_lamp",
+      "painting_wide",
+      "mirror",
+      "fern",
+      "window_basic",
+      "dresser",
+      "towel_rail",
+      "washing_machine",
+      "mirror",
+      "laundry_basket",
+      "snake_plant",
+      "lantern"
+     ],
+     "styles": [
+      "floor.grass",
+      "floor.soil",
+      "wall.glass",
+      "floor.terracotta_tiles",
+      "floor.checker",
+      "floor.slate",
+      "floor.carpet_rose",
+      "floor.path"
+     ]
+    },
+    "chain": 1912266007854173
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 6
+    },
+    "time": 548,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "acquire",
+      "item": "calendar"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2548775689933965
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 7
+    },
+    "time": 548,
+    "rules_version": 2,
+    "kind": {
+     "type": "CoinsSpent",
+     "amount": 10
+    },
+    "chain": 3401774304456757
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 8
+    },
+    "time": 548,
+    "rules_version": 2,
+    "kind": {
+     "type": "ItemAcquired",
+     "item": "calendar"
+    },
+    "chain": 2822662154371590
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 9
+    },
+    "time": 550,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "acquire",
+      "item": "succulent"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2201091693250843
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 10
+    },
+    "time": 550,
+    "rules_version": 2,
+    "kind": {
+     "type": "CoinsSpent",
+     "amount": 10
+    },
+    "chain": 943163569664133
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 11
+    },
+    "time": 550,
+    "rules_version": 2,
+    "kind": {
+     "type": "ItemAcquired",
+     "item": "succulent"
+    },
+    "chain": 2515929037089667
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 12
+    },
+    "time": 552,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "acquire",
+      "item": "candle"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2131235314925695
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 13
+    },
+    "time": 552,
+    "rules_version": 2,
+    "kind": {
+     "type": "CoinsSpent",
+     "amount": 12
+    },
+    "chain": 912412797362571
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 14
+    },
+    "time": 552,
+    "rules_version": 2,
+    "kind": {
+     "type": "ItemAcquired",
+     "item": "candle"
+    },
+    "chain": 1348419859877951
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 15
+    },
+    "time": 554,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "acquire",
+      "item": "flower_pot"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1275799505737721
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 16
+    },
+    "time": 554,
+    "rules_version": 2,
+    "kind": {
+     "type": "CoinsSpent",
+     "amount": 12
+    },
+    "chain": 981230622653799
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 17
+    },
+    "time": 554,
+    "rules_version": 2,
+    "kind": {
+     "type": "ItemAcquired",
+     "item": "flower_pot"
+    },
+    "chain": 2971912321431530
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 18
+    },
+    "time": 556,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "acquire",
+      "item": "bath_mat"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3961841400475283
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 19
+    },
+    "time": 556,
+    "rules_version": 2,
+    "kind": {
+     "type": "CoinsSpent",
+     "amount": 15
+    },
+    "chain": 3379876115207201
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 20
+    },
+    "time": 556,
+    "rules_version": 2,
+    "kind": {
+     "type": "ItemAcquired",
+     "item": "bath_mat"
+    },
+    "chain": 623725394016497
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 21
+    },
+    "time": 558,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "acquire",
+      "item": "cactus"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2439494088124924
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 22
+    },
+    "time": 558,
+    "rules_version": 2,
+    "kind": {
+     "type": "CoinsSpent",
+     "amount": 15
+    },
+    "chain": 3046800786626619
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 23
+    },
+    "time": 558,
+    "rules_version": 2,
+    "kind": {
+     "type": "ItemAcquired",
+     "item": "cactus"
+    },
+    "chain": 1701409306485655
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 24
+    },
+    "time": 679,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "place",
+      "item": "bath_mat",
+      "x": 1,
+      "y": 1,
+      "rot": 0,
+      "wall": null,
+      "on": null
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3956227986894097
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 25
+    },
+    "time": 679,
+    "rules_version": 2,
+    "kind": {
+     "type": "Placed",
+     "pid": 0,
+     "item": "bath_mat",
+     "x": 1,
+     "y": 1,
+     "rot": 0,
+     "wall": null,
+     "on": null
+    },
+    "chain": 373833962874538
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 26
+    },
+    "time": 680,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "place",
+      "item": "cactus",
+      "x": 1,
+      "y": 1,
+      "rot": 0,
+      "wall": null,
+      "on": null
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2302263900073247
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 27
+    },
+    "time": 680,
+    "rules_version": 2,
+    "kind": {
+     "type": "Placed",
+     "pid": 1,
+     "item": "cactus",
+     "x": 1,
+     "y": 1,
+     "rot": 0,
+     "wall": null,
+     "on": null
+    },
+    "chain": 636939503687894
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 28
+    },
+    "time": 682,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "rotate",
+      "pid": 0,
+      "rot": 1
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2446105515382437
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 29
+    },
+    "time": 682,
+    "rules_version": 2,
+    "kind": {
+     "type": "Rotated",
+     "pid": 0,
+     "rot": 1
+    },
+    "chain": 2974036086901208
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 30
+    },
+    "time": 684,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "set_setting",
+      "key": "time_mode",
+      "value": "real"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1254985198765508
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 31
+    },
+    "time": 684,
+    "rules_version": 2,
+    "kind": {
+     "type": "SettingSet",
+     "key": "time_mode",
+     "value": "real"
+    },
+    "chain": 200705332981638
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 32
+    },
+    "time": 2045,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "bakery_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2446735791104596
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 33
+    },
+    "time": 2045,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "bakery_in",
+     "day": 1
+    },
+    "chain": 1977568396841826
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 34
+    },
+    "time": 2048,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.bakery.bread"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3333501402139048
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 35
+    },
+    "time": 2048,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.bakery.bread",
+     "day": 1,
+     "took": [],
+     "gave": [
+      "bread"
+     ],
+     "cost": 5,
+     "earn": 0
+    },
+    "chain": 3915224050162895
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 36
+    },
+    "time": 2051,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.bakery.pie"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1756070712282801
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 37
+    },
+    "time": 2051,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.bakery.pie",
+     "day": 1,
+     "took": [],
+     "gave": [
+      "pie"
+     ],
+     "cost": 12,
+     "earn": 0
+    },
+    "chain": 2208838121812251
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 38
+    },
+    "time": 2061,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "bar_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1484576856229388
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 39
+    },
+    "time": 2061,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "bar_in",
+     "day": 1
+    },
+    "chain": 1599066222708034
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 40
+    },
+    "time": 2064,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.bar.darts"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2693230068587370
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 41
+    },
+    "time": 2064,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.bar.darts",
+     "day": 1,
+     "took": [],
+     "gave": [],
+     "cost": 0,
+     "earn": 0
+    },
+    "chain": 4474559606091448
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 42
+    },
+    "time": 2067,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.bar.jukebox"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 114337471297012
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 43
+    },
+    "time": 2067,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.bar.jukebox",
+     "day": 1,
+     "took": [],
+     "gave": [],
+     "cost": 1,
+     "earn": 0
+    },
+    "chain": 2160151042171536
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 44
+    },
+    "time": 2072,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "cafe_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 4319864879130261
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 45
+    },
+    "time": 2072,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "cafe_in",
+     "day": 1
+    },
+    "chain": 1081309660213510
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 46
+    },
+    "time": 2075,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.cafe.cocoa"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2267955900541937
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 47
+    },
+    "time": 2075,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.cafe.cocoa",
+     "day": 1,
+     "took": [],
+     "gave": [
+      "cocoa"
+     ],
+     "cost": 5,
+     "earn": 0
+    },
+    "chain": 1084501433865454
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 48
+    },
+    "time": 2078,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.cafe.coffee"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 4478339024397831
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 49
+    },
+    "time": 2078,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.cafe.coffee",
+     "day": 1,
+     "took": [],
+     "gave": [
+      "coffee"
+     ],
+     "cost": 4,
+     "earn": 0
+    },
+    "chain": 3436801564133733
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 50
+    },
+    "time": 2088,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "cemetery"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 511091759975213
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 51
+    },
+    "time": 2088,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "cemetery",
+     "day": 1
+    },
+    "chain": 1444054482501838
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 52
+    },
+    "time": 2093,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "church_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1886673918501465
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 53
+    },
+    "time": 2093,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "church_in",
+     "day": 1
+    },
+    "chain": 2555092493350442
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 54
+    },
+    "time": 2096,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.church.candle"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3728076823742399
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 55
+    },
+    "time": 2096,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.church.candle",
+     "day": 1,
+     "took": [],
+     "gave": [],
+     "cost": 2,
+     "earn": 0
+    },
+    "chain": 3243973322772497
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 56
+    },
+    "time": 2099,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.church.organ"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1479299944165119
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 57
+    },
+    "time": 2099,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.church.organ",
+     "day": 1,
+     "took": [],
+     "gave": [],
+     "cost": 0,
+     "earn": 0
+    },
+    "chain": 3163722495622249
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 58
+    },
+    "time": 2104,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "cinema_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2809249318272350
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 59
+    },
+    "time": 2104,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "cinema_in",
+     "day": 1
+    },
+    "chain": 1981266377043259
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 60
+    },
+    "time": 2115,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "clothes_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1349498116094865
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 61
+    },
+    "time": 2115,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "clothes_in",
+     "day": 1
+    },
+    "chain": 718263362869279
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 62
+    },
+    "time": 2118,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.clothes.cloth"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3388196497513627
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 63
+    },
+    "time": 2118,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.clothes.cloth",
+     "day": 1,
+     "took": [],
+     "gave": [
+      "cloth",
+      "cloth"
+     ],
+     "cost": 2,
+     "earn": 0
+    },
+    "chain": 2442564063512758
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 64
+    },
+    "time": 2123,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "creamery_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3566495551572982
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 65
+    },
+    "time": 2123,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "creamery_in",
+     "day": 1
+    },
+    "chain": 4381901434602758
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 66
+    },
+    "time": 2133,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "driving_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1783650103229584
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 67
+    },
+    "time": 2133,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "driving_in",
+     "day": 1
+    },
+    "chain": 808330578924851
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 68
+    },
+    "time": 2138,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "dump"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3792793450556426
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 69
+    },
+    "time": 2138,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "dump",
+     "day": 1
+    },
+    "chain": 3175629144532848
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 70
+    },
+    "time": 2141,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "use",
+      "station": "st.dump.scrap"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3017719705843366
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 71
+    },
+    "time": 2141,
+    "rules_version": 2,
+    "kind": {
+     "type": "Used",
+     "station": "st.dump.scrap",
+     "day": 1,
+     "took": [],
+     "gave": [
+      "metal_scrap"
+     ],
+     "cost": 0,
+     "earn": 0
+    },
+    "chain": 1622636432052576
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 72
+    },
+    "time": 2152,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "factory_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3858902765801503
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 73
+    },
+    "time": 2152,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "factory_in",
+     "day": 1
+    },
+    "chain": 583471088395928
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 74
+    },
+    "time": 3545,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "bakery_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1290489186480426
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 75
+    },
+    "time": 3545,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "bakery_in",
+     "day": 2
+    },
+    "chain": 1892182741413963
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 76
+    },
+    "time": 3555,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "bar_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2173342333496076
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 77
+    },
+    "time": 3555,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "bar_in",
+     "day": 2
+    },
+    "chain": 1261256221125251
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 78
+    },
+    "time": 3560,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "cafe_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2940984569367697
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 79
+    },
+    "time": 3560,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "cafe_in",
+     "day": 2
+    },
+    "chain": 911484163032396
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 80
+    },
+    "time": 3570,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "cemetery"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 992657415409932
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 81
+    },
+    "time": 3570,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "cemetery",
+     "day": 2
+    },
+    "chain": 2917656677887291
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 82
+    },
+    "time": 5045,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "bakery_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2383908821452431
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 83
+    },
+    "time": 5045,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "bakery_in",
+     "day": 3
+    },
+    "chain": 3880675533796303
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 84
+    },
+    "time": 5055,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "bar_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 1620389695172187
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 85
+    },
+    "time": 5055,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "bar_in",
+     "day": 3
+    },
+    "chain": 1712682440078288
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 86
+    },
+    "time": 5060,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "cafe_in"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 746324295720742
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 87
+    },
+    "time": 5060,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "cafe_in",
+     "day": 3
+    },
+    "chain": 1347464223231927
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 88
+    },
+    "time": 5070,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "cemetery"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 2299250341073571
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 89
+    },
+    "time": 5070,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "cemetery",
+     "day": 3
+    },
+    "chain": 3033968187153756
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 90
+    },
+    "time": 5075,
+    "rules_version": 2,
+    "kind": {
+     "type": "Input",
+     "cmd": {
+      "type": "travel",
+      "to": "home"
+     },
+     "pack": 1528447675680471
+    },
+    "chain": 3387789256513593
+   },
+   {
+    "id": {
+     "device": 2002,
+     "seq": 91
+    },
+    "time": 5075,
+    "rules_version": 2,
+    "kind": {
+     "type": "Travelled",
+     "to": "home",
+     "day": 3
+    },
+    "chain": 3854474979715901
+   }
+  ],
+  "snapshots": [
+   {
+    "json": "{\"through\":[3545,2002,75],\"state\":{\"player_name\":\"Тарас\",\"events_applied\":76,\"room\":{\"placements\":{\"0\":{\"pid\":0,\"item\":\"bath_mat\",\"x\":1,\"y\":1,\"rot\":1,\"wall\":null,\"on\":null,\"colors\":{},\"props\":{}},\"1\":{\"pid\":1,\"item\":\"cactus\",\"x\":1,\"y\":1,\"rot\":0,\"wall\":null,\"on\":null,\"colors\":{},\"props\":{}}},\"next_pid\":2,\"expansions\":[],\"styles\":{},\"owned_styles\":[\"floor.carpet_rose\",\"floor.checker\",\"floor.grass\",\"floor.path\",\"floor.slate\",\"floor.soil\",\"floor.terracotta_tiles\",\"wall.glass\"],\"owned_themes\":[],\"added\":[],\"removed\":[],\"dividers\":[],\"floor_paint\":{},\"wall_paint\":{},\"settings\":{\"look.hair\":\"5\",\"look.skin_color\":\"#c98f65\",\"time_mode\":\"real\"},\"built_area\":0},\"owned\":{\"armchair\":1,\"bath_mat\":2,\"bathtub\":1,\"bed\":1,\"bed_tomatoes\":1,\"book_stack\":1,\"bookshelf\":1,\"bread\":1,\"bush_flowering\":1,\"bush_round\":1,\"cactus\":1,\"calendar\":1,\"candle\":1,\"cloth\":2,\"cocoa\":1,\"coffee\":1,\"coffee_table\":1,\"compost_bin\":1,\"counter\":1,\"counter_drawers\":1,\"counter_sink\":1,\"dining_chair_wood\":2,\"door_basic\":4,\"door_garden\":1,\"dresser\":1,\"fence_picket\":8,\"fern\":1,\"ficus\":1,\"floor_lamp\":1,\"flower_bed\":1,\"flower_pot\":1,\"fridge\":1,\"fruit_bowl\":1,\"garden_bench\":1,\"garden_gate\":1,\"garden_plot\":6,\"garden_tub\":2,\"herb_pots\":1,\"kettle\":1,\"lantern\":1,\"laundry_basket\":1,\"lemon_tree\":1,\"metal_scrap\":1,\"mirror\":2,\"monstera\":1,\"nightstand\":2,\"orange_tree\":1,\"orchid_stand\":1,\"painting_wide\":2,\"pie\":1,\"plate_stack\":1,\"pond\":1,\"potting_bench\":1,\"round_dining\":1,\"rug_big\":1,\"rug_small\":1,\"scarecrow\":1,\"snake_plant\":1,\"sofa3\":1,\"stove\":1,\"succulent\":1,\"table_lamp\":2,\"toilet\":1,\"towel_rail\":1,\"tree_apple\":1,\"tv\":1,\"tv_stand\":1,\"vase\":1,\"wall_cabinet\":2,\"wall_clock\":1,\"wall_lamp\":1,\"wardrobe\":1,\"washbasin\":1,\"washing_machine\":1,\"wicker_chair\":1,\"window_basic\":3},\"earned\":0,\"spent\":105,\"tokens\":{},\"counters\":{},\"reward_days\":{},\"kindness\":[],\"relations\":{},\"kits\":[\"kit.house\"],\"gathered\":{},\"catches\":[0,0],\"collected\":[],\"collections\":[],\"delivered\":[],\"ask_gifts\":[],\"letters\":[],\"story\":{},\"location\":\"bakery_in\",\"stashed\":{},\"helped\":[],\"station_uses\":{\"st.bakery.bread\":[1,1],\"st.bakery.pie\":[1,1],\"st.bar.darts\":[1,1],\"st.bar.jukebox\":[1,1],\"st.cafe.cocoa\":[1,1],\"st.cafe.coffee\":[1,1],\"st.church.candle\":[1,1],\"st.church.organ\":[1,1],\"st.clothes.cloth\":[1,1],\"st.dump.scrap\":[1,1]},\"interviews\":{},\"minute_inputs\":[3545,1],\"fridge\":{},\"bills_paid\":[],\"quests\":{},\"reputation\":0,\"titles\":[],\"recipes_learned\":[],\"jobs_taken\":{},\"me\":null,\"parcels_sent\":{},\"parcels_received\":[],\"inbox\":[],\"guests\":{\"here\":{},\"sent_away\":{},\"ever\":{},\"rules\":{\"shut\":false,\"closed\":[]}},\"shift\":null,\"work_record\":{},\"plots\":{},\"practice\":{},\"paintings\":[],\"last_played\":null,\"repertoire\":[],\"last_busk\":null,\"busked\":[0,0],\"first_outfit\":{},\"outfit_kept\":true,\"address\":null,\"leases\":{},\"homes_bought\":[],\"congratulated\":[],\"dined\":[],\"contributions\":{},\"warmed_at\":2078,\"wear\":{\"0\":{\"since\":0,\"uses\":0},\"1\":{\"since\":0,\"uses\":0}},\"crafts_known\":[],\"tool_uses\":{},\"drive\":{\"lessons\":0,\"last_lesson\":null,\"theory\":false,\"theory_tried\":null,\"exam\":null,\"exam_tried\":null,\"licence\":null,\"taken_until\":null,\"holes\":[],\"fines_due\":0,\"car\":null,\"trip\":null,\"jailed_until\":null,\"found\":[],\"log\":[],\"unseen\":0,\"violations\":0},\"builds\":[],\"pets\":{\"owned\":{},\"fox_days\":[],\"egg\":null,\"companion\":null}},\"covered\":76,\"tips\":{\"2002\":1892182741413963},\"seqs\":{\"2002\":75},\"chained\":[2002],\"legacy\":0,\"inputs\":35,\"dropped\":[],\"inputs_seen\":true,\"mac\":4081308302065414}",
+    "through": [
+     3545,
+     2002,
+     75
+    ],
+    "covered": 76
+   },
+   {
+    "json": "{\"through\":[5045,2002,83],\"state\":{\"player_name\":\"Тарас\",\"events_applied\":84,\"room\":{\"placements\":{\"0\":{\"pid\":0,\"item\":\"bath_mat\",\"x\":1,\"y\":1,\"rot\":1,\"wall\":null,\"on\":null,\"colors\":{},\"props\":{}},\"1\":{\"pid\":1,\"item\":\"cactus\",\"x\":1,\"y\":1,\"rot\":0,\"wall\":null,\"on\":null,\"colors\":{},\"props\":{}}},\"next_pid\":2,\"expansions\":[],\"styles\":{},\"owned_styles\":[\"floor.carpet_rose\",\"floor.checker\",\"floor.grass\",\"floor.path\",\"floor.slate\",\"floor.soil\",\"floor.terracotta_tiles\",\"wall.glass\"],\"owned_themes\":[],\"added\":[],\"removed\":[],\"dividers\":[],\"floor_paint\":{},\"wall_paint\":{},\"settings\":{\"look.hair\":\"5\",\"look.skin_color\":\"#c98f65\",\"time_mode\":\"real\"},\"built_area\":0},\"owned\":{\"armchair\":1,\"bath_mat\":2,\"bathtub\":1,\"bed\":1,\"bed_tomatoes\":1,\"book_stack\":1,\"bookshelf\":1,\"bread\":1,\"bush_flowering\":1,\"bush_round\":1,\"cactus\":1,\"calendar\":1,\"candle\":1,\"cloth\":2,\"cocoa\":1,\"coffee\":1,\"coffee_table\":1,\"compost_bin\":1,\"counter\":1,\"counter_drawers\":1,\"counter_sink\":1,\"dining_chair_wood\":2,\"door_basic\":4,\"door_garden\":1,\"dresser\":1,\"fence_picket\":8,\"fern\":1,\"ficus\":1,\"floor_lamp\":1,\"flower_bed\":1,\"flower_pot\":1,\"fridge\":1,\"fruit_bowl\":1,\"garden_bench\":1,\"garden_gate\":1,\"garden_plot\":6,\"garden_tub\":2,\"herb_pots\":1,\"kettle\":1,\"lantern\":1,\"laundry_basket\":1,\"lemon_tree\":1,\"metal_scrap\":1,\"mirror\":2,\"monstera\":1,\"nightstand\":2,\"orange_tree\":1,\"orchid_stand\":1,\"painting_wide\":2,\"pie\":1,\"plate_stack\":1,\"pond\":1,\"potting_bench\":1,\"round_dining\":1,\"rug_big\":1,\"rug_small\":1,\"scarecrow\":1,\"snake_plant\":1,\"sofa3\":1,\"stove\":1,\"succulent\":1,\"table_lamp\":2,\"toilet\":1,\"towel_rail\":1,\"tree_apple\":1,\"tv\":1,\"tv_stand\":1,\"vase\":1,\"wall_cabinet\":2,\"wall_clock\":1,\"wall_lamp\":1,\"wardrobe\":1,\"washbasin\":1,\"washing_machine\":1,\"wicker_chair\":1,\"window_basic\":3},\"earned\":0,\"spent\":105,\"tokens\":{},\"counters\":{},\"reward_days\":{},\"kindness\":[],\"relations\":{},\"kits\":[\"kit.house\"],\"gathered\":{},\"catches\":[0,0],\"collected\":[],\"collections\":[],\"delivered\":[],\"ask_gifts\":[],\"letters\":[],\"story\":{},\"location\":\"bakery_in\",\"stashed\":{},\"helped\":[],\"station_uses\":{\"st.bakery.bread\":[1,1],\"st.bakery.pie\":[1,1],\"st.bar.darts\":[1,1],\"st.bar.jukebox\":[1,1],\"st.cafe.cocoa\":[1,1],\"st.cafe.coffee\":[1,1],\"st.church.candle\":[1,1],\"st.church.organ\":[1,1],\"st.clothes.cloth\":[1,1],\"st.dump.scrap\":[1,1]},\"interviews\":{},\"minute_inputs\":[5045,1],\"fridge\":{},\"bills_paid\":[],\"quests\":{},\"reputation\":0,\"titles\":[],\"recipes_learned\":[],\"jobs_taken\":{},\"me\":null,\"parcels_sent\":{},\"parcels_received\":[],\"inbox\":[],\"guests\":{\"here\":{},\"sent_away\":{},\"ever\":{},\"rules\":{\"shut\":false,\"closed\":[]}},\"shift\":null,\"work_record\":{},\"plots\":{},\"practice\":{},\"paintings\":[],\"last_played\":null,\"repertoire\":[],\"last_busk\":null,\"busked\":[0,0],\"first_outfit\":{},\"outfit_kept\":true,\"address\":null,\"leases\":{},\"homes_bought\":[],\"congratulated\":[],\"dined\":[],\"contributions\":{},\"warmed_at\":2078,\"wear\":{\"0\":{\"since\":0,\"uses\":0},\"1\":{\"since\":0,\"uses\":0}},\"crafts_known\":[],\"tool_uses\":{},\"drive\":{\"lessons\":0,\"last_lesson\":null,\"theory\":false,\"theory_tried\":null,\"exam\":null,\"exam_tried\":null,\"licence\":null,\"taken_until\":null,\"holes\":[],\"fines_due\":0,\"car\":null,\"trip\":null,\"jailed_until\":null,\"found\":[],\"log\":[],\"unseen\":0,\"violations\":0},\"builds\":[],\"pets\":{\"owned\":{},\"fox_days\":[],\"egg\":null,\"companion\":null}},\"covered\":84,\"tips\":{\"2002\":3880675533796303},\"seqs\":{\"2002\":83},\"chained\":[2002],\"legacy\":0,\"inputs\":39,\"dropped\":[],\"inputs_seen\":true,\"mac\":3107412726710215}",
+    "through": [
+     5045,
+     2002,
+     83
+    ],
+    "covered": 84
+   }
+  ],
+  "userItems": []
+ },
+ "local": [],
+ "expect": {
+  "inputs": 43,
+  "coins": 195,
+  "placements": [
+   "bath_mat",
+   "cactus"
+  ],
+  "inventory": [
+   [
+    "armchair",
+    1
+   ],
+   [
+    "bath_mat",
+    2
+   ],
+   [
+    "bathtub",
+    1
+   ],
+   [
+    "bed",
+    1
+   ],
+   [
+    "bed_tomatoes",
+    1
+   ],
+   [
+    "book_stack",
+    1
+   ],
+   [
+    "bookshelf",
+    1
+   ],
+   [
+    "bread",
+    1
+   ],
+   [
+    "bush_flowering",
+    1
+   ],
+   [
+    "bush_round",
+    1
+   ],
+   [
+    "cactus",
+    1
+   ],
+   [
+    "calendar",
+    1
+   ],
+   [
+    "candle",
+    1
+   ],
+   [
+    "cloth",
+    2
+   ],
+   [
+    "cocoa",
+    1
+   ],
+   [
+    "coffee",
+    1
+   ],
+   [
+    "coffee_table",
+    1
+   ],
+   [
+    "compost_bin",
+    1
+   ],
+   [
+    "counter",
+    1
+   ],
+   [
+    "counter_drawers",
+    1
+   ],
+   [
+    "counter_sink",
+    1
+   ],
+   [
+    "dining_chair_wood",
+    2
+   ],
+   [
+    "door_basic",
+    4
+   ],
+   [
+    "door_garden",
+    1
+   ],
+   [
+    "dresser",
+    1
+   ],
+   [
+    "fence_picket",
+    8
+   ],
+   [
+    "fern",
+    1
+   ],
+   [
+    "ficus",
+    1
+   ],
+   [
+    "floor_lamp",
+    1
+   ],
+   [
+    "flower_bed",
+    1
+   ],
+   [
+    "flower_pot",
+    1
+   ],
+   [
+    "fridge",
+    1
+   ],
+   [
+    "fruit_bowl",
+    1
+   ],
+   [
+    "garden_bench",
+    1
+   ],
+   [
+    "garden_gate",
+    1
+   ],
+   [
+    "garden_plot",
+    6
+   ],
+   [
+    "garden_tub",
+    2
+   ],
+   [
+    "herb_pots",
+    1
+   ],
+   [
+    "kettle",
+    1
+   ],
+   [
+    "lantern",
+    1
+   ],
+   [
+    "laundry_basket",
+    1
+   ],
+   [
+    "lemon_tree",
+    1
+   ],
+   [
+    "metal_scrap",
+    1
+   ],
+   [
+    "mirror",
+    2
+   ],
+   [
+    "monstera",
+    1
+   ],
+   [
+    "nightstand",
+    2
+   ],
+   [
+    "orange_tree",
+    1
+   ],
+   [
+    "orchid_stand",
+    1
+   ],
+   [
+    "painting_wide",
+    2
+   ],
+   [
+    "pie",
+    1
+   ],
+   [
+    "plate_stack",
+    1
+   ],
+   [
+    "pond",
+    1
+   ],
+   [
+    "potting_bench",
+    1
+   ],
+   [
+    "round_dining",
+    1
+   ],
+   [
+    "rug_big",
+    1
+   ],
+   [
+    "rug_small",
+    1
+   ],
+   [
+    "scarecrow",
+    1
+   ],
+   [
+    "snake_plant",
+    1
+   ],
+   [
+    "sofa3",
+    1
+   ],
+   [
+    "stove",
+    1
+   ],
+   [
+    "succulent",
+    1
+   ],
+   [
+    "table_lamp",
+    2
+   ],
+   [
+    "toilet",
+    1
+   ],
+   [
+    "towel_rail",
+    1
+   ],
+   [
+    "tree_apple",
+    1
+   ],
+   [
+    "tv",
+    1
+   ],
+   [
+    "tv_stand",
+    1
+   ],
+   [
+    "vase",
+    1
+   ],
+   [
+    "wall_cabinet",
+    2
+   ],
+   [
+    "wall_clock",
+    1
+   ],
+   [
+    "wall_lamp",
+    1
+   ],
+   [
+    "wardrobe",
+    1
+   ],
+   [
+    "washbasin",
+    1
+   ],
+   [
+    "washing_machine",
+    1
+   ],
+   [
+    "wicker_chair",
+    1
+   ],
+   [
+    "window_basic",
+    3
+   ]
+  ],
+  "name": "Тарас",
+  "people": {
+   "me": null,
+   "sent": 0,
+   "inbox": 0
+  }
+ },
+ "note": "A world played over four days: kits, shopping, a furnished room, walks, talks, stations, gathering."
+}

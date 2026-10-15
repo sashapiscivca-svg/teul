@@ -1,0 +1,453 @@
+{
+ "schema": 1,
+ "id": "work",
+ "version": 1,
+ "items": [
+  {
+   "id": "seed_tomato",
+   "name": "item.seed_tomato",
+   "category": "seeds",
+   "tags": [
+    "seed"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "tomato",
+   "name": "item.tomato",
+   "category": "food",
+   "tags": [
+    "food",
+    "veg"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "sapling_apple",
+   "name": "item.sapling_apple",
+   "category": "seeds",
+   "tags": [
+    "seed"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "apple_w",
+   "name": "item.apple_w",
+   "category": "food",
+   "tags": [
+    "food",
+    "fruit"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true,
+   "carry": true
+  },
+  {
+   "id": "garden_plot",
+   "name": "item.garden_plot",
+   "category": "garden",
+   "tags": [
+    "plot"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "pot_plot",
+   "name": "item.pot_plot",
+   "category": "garden",
+   "tags": [
+    "plot",
+    "indoor"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "plant_tomato_0",
+   "name": "item.plant_tomato_0",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_apple_0",
+   "name": "item.plant_apple_0",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_tomato_1",
+   "name": "item.plant_tomato_1",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_apple_1",
+   "name": "item.plant_apple_1",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_tomato_2",
+   "name": "item.plant_tomato_2",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_apple_2",
+   "name": "item.plant_apple_2",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_tomato_3",
+   "name": "item.plant_tomato_3",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_apple_3",
+   "name": "item.plant_apple_3",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "plant_withered",
+   "name": "item.plant_withered",
+   "category": "plantstage",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "surface",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "easel_w",
+   "name": "item.easel_w",
+   "category": "decor",
+   "tags": [
+    "easel"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "canvas_art",
+   "name": "item.canvas_art",
+   "category": "decor",
+   "tags": [
+    "canvas"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "wall",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "piano_w",
+   "name": "item.piano_w",
+   "category": "decor",
+   "tags": [
+    "instrument"
+   ],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free"
+  },
+  {
+   "id": "counter_w",
+   "name": "item.counter_w",
+   "category": "village",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "hidden": true
+  },
+  {
+   "id": "stall_w",
+   "name": "item.stall",
+   "category": "village",
+   "tags": [],
+   "footprint": {
+    "w": 1,
+    "d": 1
+   },
+   "layer": "floor",
+   "acquire": "free",
+   "hidden": true
+  }
+ ],
+ "locations": [
+  {
+   "id": "cafe_in",
+   "name": "Кав'ярня",
+   "w": 6,
+   "h": 4,
+   "tiles": [
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "props": [
+    {
+     "item": "counter_w",
+     "x": 2,
+     "y": 1
+    }
+   ]
+  },
+  {
+   "id": "bazaar",
+   "name": "Базар",
+   "w": 6,
+   "h": 4,
+   "tiles": [
+    "gggggg",
+    "gggggg",
+    "gggggg",
+    "gggggg"
+   ],
+   "legend": {
+    "g": "floor.oak"
+   },
+   "props": [
+    {
+     "item": "stall_w",
+     "x": 3,
+     "y": 2
+    }
+   ]
+  }
+ ],
+ "work": [
+  {
+   "id": "work.cafe",
+   "location": "cafe_in",
+   "prop": "counter_w",
+   "name": "Зміна в кав'ярні",
+   "boss": "Олена",
+   "hours": [
+    8,
+    18
+   ],
+   "days": "daily",
+   "steps": 4,
+   "gap": 2,
+   "pay": 5,
+   "ask": "{who} просить: {what}",
+   "options": [
+    "кава",
+    "чай",
+    "какао"
+   ],
+   "start": "Фартух на гачку — ставай за стійку.",
+   "thanks": "Дякую, гарно попрацювали!"
+  }
+ ],
+ "plants": [
+  {
+   "id": "tomato",
+   "name": "Помідори",
+   "seed": "seed_tomato",
+   "stages": [
+    0,
+    2,
+    5,
+    9
+   ],
+   "models": [
+    "plant_tomato_0",
+    "plant_tomato_1",
+    "plant_tomato_2",
+    "plant_tomato_3"
+   ],
+   "dead_model": "plant_withered",
+   "harvest": [
+    "tomato",
+    3
+   ],
+   "seasons": [
+    "Spring",
+    "Summer",
+    "Autumn"
+   ],
+   "thirst": 2,
+   "die": 4
+  },
+  {
+   "id": "apple",
+   "name": "Яблуня",
+   "seed": "sapling_apple",
+   "tree": true,
+   "stages": [
+    0,
+    3,
+    6,
+    10
+   ],
+   "models": [
+    "plant_apple_0",
+    "plant_apple_1",
+    "plant_apple_2",
+    "plant_apple_3"
+   ],
+   "dead_model": "plant_withered",
+   "harvest": [
+    "apple_w",
+    4
+   ],
+   "thirst": 6,
+   "die": 12,
+   "fruit_every": 7,
+   "fruit_seasons": [
+    "Summer",
+    "Autumn"
+   ]
+  }
+ ],
+ "stations": [
+  {
+   "id": "st.seeds",
+   "location": "bazaar",
+   "prop": "stall_w",
+   "label": "Купити насіння помідорів",
+   "cost": 1,
+   "gives": [
+    [
+     "seed_tomato",
+     1
+    ]
+   ],
+   "kind": "buy",
+   "days": "daily"
+  },
+  {
+   "id": "st.sapling",
+   "location": "bazaar",
+   "prop": "stall_w",
+   "label": "Купити саджанець яблуні",
+   "cost": 5,
+   "gives": [
+    [
+     "sapling_apple",
+     1
+    ]
+   ],
+   "kind": "buy",
+   "days": "daily"
+  }
+ ],
+ "pocket": 12
+}

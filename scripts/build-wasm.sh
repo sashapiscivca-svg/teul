@@ -19,9 +19,10 @@ while [ $# -gt 0 ]; do
 done
 
 # the paths of this checkout and of the cargo registry are not baked into the wasm (panic locations): the same
-# source gives the same wasm wherever it is built
+# source gives the same wasm wherever it is built. rustc tries the last --remap-path-prefix first, so the cargo
+# home comes last: it wins even when it lies inside the checkout (the project's own .toolchain/cargo)
 cargo_home="${CARGO_HOME:-$HOME/.cargo}"
-export RUSTFLAGS="${RUSTFLAGS:-} --remap-path-prefix=$cargo_home=/cargo --remap-path-prefix=$PWD=."
+export RUSTFLAGS="${RUSTFLAGS:-} --remap-path-prefix=$PWD=. --remap-path-prefix=$cargo_home=/cargo"
 cargo build -p teul-wasm --target wasm32-unknown-unknown --profile "$profile"
 mkdir -p "$out"
 wasm-bindgen "target/wasm32-unknown-unknown/$profile/teul_wasm.wasm" --out-dir "$out" --target "$target" --typescript

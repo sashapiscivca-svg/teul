@@ -8,10 +8,12 @@
 
 Версія живе в одному місці — `app/package.json`, поле `"version"` (`major.minor.patch`). Звідти її беруть:
 
-- Android (`app/android/app/build.gradle`): `versionName` = версія, `versionCode` = `major·10000 + minor·100 + patch` (1.0.0 → 10000, 1.2.3 → 10203). Код має лише зростати, інакше Android не поставить оновлення.
+- Android (`app/android/app/build.gradle`): `versionName` = версія, `versionCode` = `major·10000 + minor·100 + patch` (1.0.0 → 10000, 1.2.3 → 10203). Код має лише зростати, інакше Android не поставить оновлення. `app/package.json` теж містить його як `"versionCode"` (звідти його читає перевірка оновлень F-Droid); якщо вони розходяться, Gradle зупиняється.
 - Tauri (`desktop/src-tauri/tauri.conf.json`: `"version": "../../app/package.json"`).
 
-Кожен запуск `scripts/release.sh` спершу піднімає patch-номер у `app/package.json` і `package-lock.json` (1.0.0 → 1.0.1; після 1.0.99 іде 1.1.0, бо `versionCode` тримає patch нижче 100), тож кожна збірка ставиться поверх попередньої як оновлення. `--same-version` перезбирає поточну версію без підйому. Мажорну чи мінорну версію міняють руками в `"version"`.
+Кожен запуск `scripts/release.sh` спершу піднімає patch-номер у `app/package.json` і `package-lock.json` (1.0.0 → 1.0.1; після 1.0.99 іде 1.1.0, бо `versionCode` тримає patch нижче 100), тож кожна збірка ставиться поверх попередньої як оновлення. `--same-version` перезбирає поточну версію без підйому. Мажорну чи мінорну версію міняють руками разом у `"version"` і `"versionCode"`.
+
+Збірки мають бути відтворюваними: скрипти випуску задають `SOURCE_DATE_EPOCH` як час коміту (з нього береться ідентичність збірки у вебзастосунку), `scripts/build-wasm.sh` не впускає у wasm шляхи до робочої копії й реєстру cargo, а APK не містить ні ідентифікатора git-коміту, ні зашифрованого Google списку залежностей. Той самий коміт, зібраний тими самими інструментами (Rust, wasm-bindgen, Node, JDK, Android build tools), дає ті самі файли; завдяки цьому F-Droid може поширювати APK, підписаний власним ключем проєкту.
 
 ## Збереження не ламаються
 

@@ -10,6 +10,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 source .toolchain/env.sh
+# the build's time is the commit's time, so one commit always builds the same files (reproducible builds)
+export SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-$(git log -1 --format=%ct)}"
 
 android=1 linux=1 windows=1 web=1 bump=1
 for a in "$@"; do
@@ -24,7 +26,7 @@ for a in "$@"; do
 done
 
 if [ "$bump" = 1 ]; then
-  # Android's versionCode is major*10000 + minor*100 + patch, so patch stays below 100
+  # Android's versionCode (also written to app/package.json) is major*10000 + minor*100 + patch, so patch stays below 100
   node -e '
     const fs = require("fs");
     const files = ["app/package.json", "app/package-lock.json"];
@@ -36,6 +38,7 @@ if [ "$bump" = 1 ]; then
     for (const f of files) {
       const j = JSON.parse(fs.readFileSync(f, "utf8"));
       j.version = v;
+      if (f === files[0]) j.versionCode = ma * 10000 + mi * 100 + pa;
       if (j.packages && j.packages[""]) j.packages[""].version = v;
       fs.writeFileSync(f, JSON.stringify(j, null, 2) + "\n");
     }

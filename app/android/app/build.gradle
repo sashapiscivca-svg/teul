@@ -2,10 +2,15 @@ apply plugin: 'com.android.application'
 
 import groovy.json.JsonSlurper
 
-// One version for every build: app/package.json "version" (major.minor.patch).
-def teulVersion = new JsonSlurper().parse(file('../../package.json')).version as String
+// One version for every build: app/package.json "version" (major.minor.patch) and its "versionCode", which must be
+// major * 10000 + minor * 100 + patch (it is written out so that F-Droid's update check can read it).
+def teulPackage = new JsonSlurper().parse(file('../../package.json'))
+def teulVersion = teulPackage.version as String
 def teulParts = teulVersion.tokenize('.-').take(3).collect { it.isInteger() ? it.toInteger() : 0 }
 def teulVersionCode = teulParts[0] * 10000 + teulParts[1] * 100 + teulParts[2]
+if (teulPackage.versionCode != teulVersionCode) {
+    throw new GradleException("app/package.json: versionCode ${teulPackage.versionCode} does not match version ${teulVersion} (expected ${teulVersionCode})")
+}
 
 // The release key lives outside the repository (scripts/android-keystore.sh makes it).
 def keystorePropsFile = file(System.getenv('TEUL_KEYSTORE_PROPERTIES') ?: "${System.getProperty('user.home')}/.teul-release/keystore.properties")
@@ -44,7 +49,14 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             if (keystoreProps['storeFile']) signingConfig signingConfigs.release
+            // the same APK from the same source wherever it is built (no git commit id inside it)
+            vcsInfo.include = false
         }
+    }
+    // no Google-encrypted list of the dependencies in the APK's signing block (F-Droid and IzzyOnDroid flag it)
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
     }
 }
 
@@ -68,11 +80,3 @@ dependencies {
 
 apply from: 'capacitor.build.gradle'
 
-try {
-    def servicesJSON = file('google-services.json')
-    if (servicesJSON.text) {
-        apply plugin: 'com.google.gms.google-services'
-    }
-} catch(Exception e) {
-    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
-}

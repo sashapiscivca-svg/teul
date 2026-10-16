@@ -4,6 +4,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 source .toolchain/env.sh
+# the build's time is the commit's time, so one commit always builds the same files (reproducible builds)
+export SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-$(git log -1 --format=%ct)}"
 web=1
 for a in "$@"; do case "$a" in --no-web) web=0 ;; *) echo "unknown argument: $a" >&2; exit 2 ;; esac; done
 

@@ -8,10 +8,12 @@
 
 The version lives in one place: `app/package.json`, the `"version"` field (`major.minor.patch`). It is taken from there by:
 
-- Android (`app/android/app/build.gradle`): `versionName` = the version, `versionCode` = `major·10000 + minor·100 + patch` (1.0.0 → 10000, 1.2.3 → 10203). The code must only grow, otherwise Android will not install the update.
+- Android (`app/android/app/build.gradle`): `versionName` = the version, `versionCode` = `major·10000 + minor·100 + patch` (1.0.0 → 10000, 1.2.3 → 10203). The code must only grow, otherwise Android will not install the update. `app/package.json` also carries it as `"versionCode"` (F-Droid's update check reads it there); Gradle stops if the two disagree.
 - Tauri (`desktop/src-tauri/tauri.conf.json`: `"version": "../../app/package.json"`).
 
-Every run of `scripts/release.sh` first raises the patch number in `app/package.json` and `package-lock.json` (1.0.0 → 1.0.1; after 1.0.99 comes 1.1.0, because `versionCode` keeps the patch below 100), so each build installs over the previous one as an update. `--same-version` rebuilds the current version without raising it. The major or minor version is changed by hand in `"version"`.
+Every run of `scripts/release.sh` first raises the patch number in `app/package.json` and `package-lock.json` (1.0.0 → 1.0.1; after 1.0.99 comes 1.1.0, because `versionCode` keeps the patch below 100), so each build installs over the previous one as an update. `--same-version` rebuilds the current version without raising it. The major or minor version is changed by hand in `"version"` and `"versionCode"` together.
+
+The builds are meant to be reproducible: the release scripts set `SOURCE_DATE_EPOCH` to the commit's time (the build's identity in the web app comes from it), `scripts/build-wasm.sh` keeps the checkout's and the cargo registry's paths out of the wasm, and the APK carries neither the git commit id nor Google's encrypted dependency list. The same commit built with the same toolchain (Rust, wasm-bindgen, Node, JDK, Android build tools) gives the same files; this lets F-Droid ship the APK signed with the project's own key.
 
 ## Saves do not break
 

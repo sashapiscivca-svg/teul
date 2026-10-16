@@ -1,6 +1,10 @@
 // End-to-end flows in a real (headless Firefox) browser against `vite preview`.
-// Usage: npm run build:e2e (a release build has no debug hook), then vite preview; BASE=http://localhost:4173/ node e2e/flows.mjs
+// Usage: npm run build:e2e (a release build has no debug hook), then vite preview; BASE=http://localhost:4173/ node e2e/flows.mjs [shots-dir]
 import { withFirefox } from '../../scripts/bidi.mjs';
+
+// screenshots of the steps only when a folder is given
+const SHOTS = process.argv[2] ?? '';
+const snap = (page, name) => (SHOTS ? page.shot(`${SHOTS}/${name}.png`) : Promise.resolve());
 
 const BASE = process.env.BASE ?? 'http://localhost:4173/';
 // The town keeps real hours (people sleep at night, stalls close): run the world at midday whatever the hour.
@@ -129,7 +133,7 @@ await withFirefox(async (page) => {
     return 'ok';
   })()`);
   check('nothing is used through a wall from the next room', throughWall === 'ok', String(throughWall));
-  await page.shot('/tmp/shots/e2e-1-first-run.png');
+  await snap(page, 'e2e-1-first-run');
 
   // ---- walking
   await page.eval('window.__teul.game.debugTeleport(3.5, 4.5)');
@@ -155,7 +159,7 @@ await withFirefox(async (page) => {
   await page.sleep(1800);
   s = await state();
   check('tapping a stool walks to it and sits down', s.seat === stoolPid, JSON.stringify([s.seat, stoolPid, s.walker, s.path]));
-  await page.shot('/tmp/shots/e2e-1b-seated.png');
+  await snap(page, 'e2e-1b-seated');
   await press('KeyD', 300);
   check('moving with the keys stands up', (await state()).seat === null);
 
@@ -169,7 +173,7 @@ await withFirefox(async (page) => {
   await page.sleep(200);
   s = await state();
   check('watering pays nothing (no coins from chores at home)', s.coins === coins0, `${coins0} -> ${s.coins}`);
-  await page.shot('/tmp/shots/e2e-2-action.png');
+  await snap(page, 'e2e-2-action');
 
   // ---- shop: buy a stool
   await click('.hud-tr button[aria-label="Магазин"]');
@@ -183,7 +187,7 @@ await withFirefox(async (page) => {
   s = await state();
   check('the stool card exists', bought === true);
   check('buying a stool costs 25 coins and adds one', s.coins === coins0 - 25 && (s.free.stool ?? 0) === freeBefore + 1, JSON.stringify([s.coins, s.free]));
-  await page.shot('/tmp/shots/e2e-3-shop.png');
+  await snap(page, 'e2e-3-shop');
 
   // ---- a locked item shows what is missing, and does not change coins
   const coinsLocked = (await state()).coins;
@@ -211,7 +215,7 @@ await withFirefox(async (page) => {
   check('tapping the floor places it', s.placements.length === placedBefore + 1, `${placedBefore} -> ${s.placements.length}`);
   const stool = s.placements.find((p) => p.item === 'stool' && p.x === 5 && p.y === 7);
   check('it landed on the tapped cell', !!stool, JSON.stringify(s.placements));
-  await page.shot('/tmp/shots/e2e-4-edit.png');
+  await snap(page, 'e2e-4-edit');
 
   // ---- leaving the editor
   await click('.edit-bar .tools .round.done');
@@ -251,7 +255,7 @@ await withFirefox(async (page) => {
   await click('.tools button[aria-label="Повторити"]');
   await page.sleep(200);
   check('redo paints again', (await state()).room.floorPaint['1,1'] === 'floor.pine');
-  await page.shot('/tmp/shots/e2e-5-paint.png');
+  await snap(page, 'e2e-5-paint');
 
   await click('.modes button[aria-label="Форма"]');
   await page.sleep(200);
@@ -271,7 +275,7 @@ await withFirefox(async (page) => {
   await page.sleep(200);
   s = await state();
   check('world mode fixes the time of day', s.room.settings.time_mode === 'fixed', JSON.stringify(s.room.settings));
-  await page.shot('/tmp/shots/e2e-6-world.png');
+  await snap(page, 'e2e-6-world');
   await click('.edit-bar .tools .round.done');
   await page.sleep(200);
 
@@ -314,7 +318,7 @@ await withFirefox(async (page) => {
   await page.eval("window.dispatchEvent(new KeyboardEvent('keydown', { code: 'BracketRight', bubbles: true }))");
   await page.sleep(500);
   check('the view turns a quarter', (await state()).room.view === 1);
-  await page.shot('/tmp/shots/e2e-7-rotated.png');
+  await snap(page, 'e2e-7-rotated');
 
   // ---- out of the front door: the village and its people
   await page.eval('window.__teul.game.debugTeleport(0.5, 7.5)');
@@ -327,7 +331,7 @@ await withFirefox(async (page) => {
   check('the front door leads to the village', s.location === 'village', s.location);
   check('the town is one big map (with the outskirts street «Новобудовна» in the south)', s.room.cells === 74 * 114, String(s.room.cells));
   check('eight people live in the village', s.npcs.length === 8, String(s.npcs.length));
-  await page.shot('/tmp/shots/e2e-v1-village.png');
+  await snap(page, 'e2e-v1-village');
   let someone = s.npcs.find((n) => n.shown);
   if (someone) {
     // walk up to them by tapping them and choosing to talk
@@ -360,7 +364,7 @@ await withFirefox(async (page) => {
   const met = s.npcs.find((n) => n.points > 0);
   check('the first talk of the day brings friendship', met?.points === 20, JSON.stringify(s.npcs));
   await page.sleep(1500);
-  await page.shot('/tmp/shots/e2e-v2-dialogue.png');
+  await snap(page, 'e2e-v2-dialogue');
   await clickText('.dlg-choices .chip', 'Подарувати');
   await page.sleep(300);
   check('a gift opens the picker', await page.eval(`getComputedStyle(document.querySelector('.settings.gift')).display !== 'none'`));
@@ -368,7 +372,7 @@ await withFirefox(async (page) => {
   await click('[aria-label="Мешканці"]');
   await page.sleep(300);
   check('the people panel lists everyone', (await page.eval(`document.querySelectorAll('.people .person').length`)) === 8);
-  await page.shot('/tmp/shots/e2e-v3-people.png');
+  await snap(page, 'e2e-v3-people');
   await page.eval(`document.querySelector('.settings.people .round').click()`);
   // the day: mail, gathering, fishing
   await page.eval('window.__teul.game.debugGo(\'village\')');
@@ -384,7 +388,7 @@ await withFirefox(async (page) => {
     await page.eval(`document.querySelector('.today .letter .cta').click()`);
     await page.sleep(300);
     check('opening a letter reads it', (await page.eval(`document.querySelectorAll('.today .letter:not(.opened)').length`)) === unread - 1);
-    await page.shot('/tmp/shots/e2e-v4-mail.png');
+    await snap(page, 'e2e-v4-mail');
     await page.eval(`document.querySelector('.today .round').click()`);
   } else {
     console.log('(no letters yet in a new world: the mail is skipped)');
@@ -410,7 +414,7 @@ await withFirefox(async (page) => {
   await page.sleep(400);
   const dayAfter = JSON.parse(await page.eval('JSON.stringify(window.__teul.game.daily)'));
   check('a fish bites and is landed', landed && dayAfter.catches_left === 11, String(dayAfter.catches_left));
-  await page.shot('/tmp/shots/e2e-v5-fish.png');
+  await snap(page, 'e2e-v5-fish');
 
   // ---- into a public building and out again
   const school = JSON.parse(await page.eval('JSON.stringify(window.__teul.engine.catalog.sites.school_site)'));
@@ -423,7 +427,7 @@ await withFirefox(async (page) => {
   for (let i = 0; i < 30 && (await state()).location !== 'school_in'; i++) await page.sleep(150);
   s = await state();
   check('the school can be entered', s.location === 'school_in', s.location);
-  await page.shot('/tmp/shots/e2e-v6-school.png');
+  await snap(page, 'e2e-v6-school');
   // the way out: the middle of the classroom's door in the south wall
   const way = JSON.parse(await page.eval(`JSON.stringify(window.__teul.engine.catalog.locations.school_in.exits[0])`));
   await tapCell(way.x + 1, way.y);
@@ -458,7 +462,7 @@ await withFirefox(async (page) => {
   check('the workshop offers to mend things', await clickText('.bubble-btn', 'Відновити'));
   await page.sleep(1200);
   check('the workshop opens', await page.eval(`getComputedStyle(document.querySelector('.settings.workshop')).display !== 'none'`));
-  await page.shot('/tmp/shots/e2e-v7-workshop.png');
+  await snap(page, 'e2e-v7-workshop');
   if (bin) {
     const coins = (await state()).coins;
     await page.eval(`document.querySelector('.workshop-row .cta').click()`);
@@ -491,7 +495,7 @@ await withFirefox(async (page) => {
   await page.sleep(400);
   for (const k of ['ArrowLeft', 'ArrowUp', 'Space']) await press(k, 40);
   await page.sleep(300);
-  await page.shot('/tmp/shots/e2e-v8-games.png');
+  await snap(page, 'e2e-v8-games');
   await key('keydown', 'Escape');
   await key('keydown', 'Escape');
   await page.sleep(200);
@@ -529,7 +533,7 @@ await withFirefox(async (page) => {
   for (let i = 0; i < 30 && (await state()).location !== 'farm'; i++) await page.sleep(150);
   s = await state();
   check('the taxi takes the player to the farm for its fare', s.location === 'farm' && s.coins === coinsBefore - farmFare, `${s.location} ${s.coins}`);
-  await page.shot('/tmp/shots/e2e-v9-farm.png');
+  await snap(page, 'e2e-v9-farm');
   await page.eval('window.__teul.game.debugGo(\'village\')');
   await page.sleep(400);
 
@@ -908,7 +912,7 @@ await withFirefox(async (page) => {
   for (const [w, h] of [[640, 360], [932, 430]]) {
     await page.viewport(w, h);
     await page.sleep(500);
-    await page.shot(`/tmp/shots/e2e-size-${w}x${h}.png`);
+    await snap(page, `e2e-size-${w}x${h}`);
   }
   // ---- a new world for the look and the homes: what they cost needs a purse of the first day
   // (from a page that does not open the save, so nothing holds the database open while it is deleted)

@@ -2,6 +2,20 @@
 
 All notable changes to Teul are listed here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow [Semantic Versioning](https://semver.org/) for the game's saves: a new version always opens the saves of every older one.
 
+## [1.1.1] — 2026-10-16
+
+### Fixed
+
+- **A browser that refuses the site its storage** — all cross-site cookies and site data blocked while the game runs in another site's frame (as on itch.io), or a strict private mode — no longer shows a raw `SecurityError`: the game checks its storage at start-up and shows its own screen, in Ukrainian or English, with what happened, how to allow the site's data, and links to the game's own page and the downloads.
+- **On a shared web origin** (itch.io serves every HTML game from one) the game touches only its own: a new build lets go of its own service workers and caches only, and "Delete account" removes only the game's entries of the web storage, never other games'.
+- **The character screen:** the figures in the "Build" row no longer spill over the "Pet" row below.
+- **Documentation:** the 1.1.0 notes said the content security policy is offline on every platform; only the desktop app sets one (the web and Android builds are offline because they make no network requests).
+
+### Changed
+
+- **A reproducible Android build:** the build's identity comes from the commit's time (`SOURCE_DATE_EPOCH`), the WebAssembly core no longer carries the build machine's paths, and the APK carries neither the git commit id nor Google's encrypted dependency list; the unused Google Services Gradle plugin of the Capacitor template is gone. The same commit built with the same tools gives the same APK, which lets F-Droid ship the APK signed with the project's own key.
+- **Store metadata** for F-Droid and other F-Droid repositories in `fastlane/metadata/android/` (English and Ukrainian: descriptions, changelogs, icon, feature graphic, screenshots); `app/package.json` also states the Android `versionCode`.
+
 ## [1.1.0] — 2026-10-15
 
 The first public release: **Lypove only**. Teul is now a fully offline, single-player game about the town of Lypove, its eight surrounding maps and its interiors. The source is published under the AGPL-3.0-or-later, the original content under CC BY-NC-ND 4.0.

@@ -1,8 +1,8 @@
 {
   "name": "teul-app",
   "private": true,
-  "version": "1.1.0",
-  "versionCode": 10100,
+  "version": "1.1.1",
+  "versionCode": 10101,
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {

@@ -1,0 +1,4 @@
+• If the browser refuses the game its storage (all cross-site data blocked, e.g. on itch.io, or a strict private mode), the game now says so and what to do, instead of a raw error.
+• The game no longer touches other sites' caches or data on a shared web origin.
+• Character screen: the build figures no longer spill over the "Pet" row.
+• A reproducible Android build, and store metadata for F-Droid.

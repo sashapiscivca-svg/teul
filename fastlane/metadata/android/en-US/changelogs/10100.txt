@@ -1,0 +1,1 @@
+The first public release: Lypove only. A fully offline, single-player game about the town of Lypove, its eight surrounding maps and its interiors. The network features and the outer world of 1.0 are gone; saves from 1.0.x open whole. No camera or microphone permissions any more. Source under AGPL-3.0-or-later, original content under CC BY-NC-ND 4.0.

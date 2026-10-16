@@ -1,0 +1,22 @@
+<b>Teul</b> is a cozy, fully offline life sim in pixel-art isometry. You move into <b>Lypove</b> (Липове), a small Ukrainian town that lives by your device's real calendar and clock: the townsfolk go to work, the market opens in the morning, the lanterns come on at dusk, and the seasons, holidays and full moons are the real ones.
+
+• <b>A whole town</b>: streets, a market square, a lake with a beach and a park, and more than thirty interiors to walk into — the school, the hospital, the café, the bar, the church, the cinema, shops and workshops.
+• <b>Eight maps around it</b>: the Whispering Forest, the wheat field, the farm, the cemetery, the scrapyard, the hippodrome, the vineyard and the cave.
+• <b>Your home</b>: grow one room into a house with a garden and a greenhouse; a full editor for walls, floors, light and furniture; a pet that lives with you.
+• <b>Townsfolk with lives</b>: more than a hundred residents with schedules, moods and friendships. They fall ill, grow older, have children and talk about what happened in town.
+• <b>The newspaper</b>: “The Lypove Herald” comes every morning with the town's news and the requests people have for you.
+• <b>Living there</b>: shifts at work, a garden that grows over real days, monthly bills, cooking, crafting, clothes and the salon; a driving school, your own car and a taxi.
+• <b>Things to do</b>: board games, musical instruments and records, the radio and the TV, races at the hippodrome, holidays with their preparations.
+• <b>Rifts</b>: on the equinoxes and solstices the world cracks open for a day into rift worlds.
+
+<b>Spooky nights</b> (torch-lit crowds, masked figures, a chase) are <b>off by default</b>: they are switched on in the settings, there is no gore, and every scene can be left.
+
+<b>Ukrainian and English</b>, and accessibility options: text size, high contrast, reduced motion, colour-blind cues, bigger touch targets and captions for the sounds that matter.
+
+<b>Privacy.</b> No accounts, no servers, no ads, no analytics, no tracking. The game never goes online: your world lives only on your device, sealed with a key from the device's key store, and moves to another device only as an encrypted backup file you make yourself. A newer version always opens the saves of every older one.
+
+<b>Controls.</b> A touch joystick and buttons; tap people and things; drag to look around, pinch to zoom. A keyboard and a mouse work too.
+
+<b>Licences.</b> The code is free software under the GNU AGPL-3.0-or-later. The game's original content — the world's maps, texts, names, music and art — is under CC BY-NC-ND 4.0 (free to share unmodified for non-commercial use), which is why this app carries the “Non-Free Assets” anti-feature. The names “Teul”/“Теул” and “Lypove”/“Липове”, the icon and the title art are the game's brand; forks must use their own.
+
+The same game runs in the browser and on Windows and Linux: https://github.com/sashapiscivca-svg/teul

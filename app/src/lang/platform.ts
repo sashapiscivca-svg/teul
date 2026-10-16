@@ -269,4 +269,15 @@ export const PLATFORM: Table = {
 
   // worlds.ts
   'worlds.main': ['Липове', 'Lypove'],
+
+  // storagecheck.ts: the browser refuses this site its storage
+  'storage.title': ['Браузер не дає цьому сайту нічого зберігати', 'Your browser does not let this site save anything'],
+  'storage.text': ['Липове тримає твій світ лише на твоєму пристрої, у сховищі браузера. Зараз браузер це сховище заблокував (так буває, коли заборонено всі сторонні cookie й дані сайтів або в суворому приватному режимі), тож гра не може ні почати світ, ні зберегти його.', 'Lypove keeps your world only on your device, in the browser’s storage. Right now the browser has blocked that storage (this happens when all third-party cookies and site data are blocked, or in a strict private mode), so the game can neither start a world nor keep it.'],
+  'storage.allowFramed': ['Дозволь cookie й дані сайту для сторінки, на якій граєш (наприклад, itch.io), і перезавантаж її.', 'Allow cookies and site data for the page you are playing on (for example itch.io), then reload it.'],
+  'storage.allow': ['Дозволь cookie й дані для цього сайту в налаштуваннях браузера й перезавантаж сторінку.', 'Allow cookies and site data for this site in your browser’s settings, then reload the page.'],
+  'storage.playHome': ['Або грай на власній сторінці гри:', 'Or play on the game’s own page:'],
+  'storage.download': ['Або встанови гру на Windows, Linux чи Android:', 'Or install the game on Windows, Linux or Android:'],
+  'storage.downloadLink': ['завантаження', 'downloads'],
+  'storage.private': ['У приватному вікні світ однаково зникне, щойно ти його закриєш.', 'In a private window the world would be gone anyway as soon as you close it.'],
+  'storage.retry': ['Спробувати ще раз', 'Try again'],
 };

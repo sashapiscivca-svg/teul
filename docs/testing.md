@@ -6,7 +6,7 @@
 - **Core:** `cargo test`, over 480 tests in `crates/teul-core/tests` (one test program, `tests/all.rs`) and in the modules.
 - **Client:** `vitest`, over 480 tests in `app/test`.
 - **Content:** scripts that check the economy and the stories.
-- **e2e:** 34 scenarios in a real headless Firefox through WebDriver BiDi (`scripts/bidi.mjs`). They run against `vite preview` of the e2e build, which has the test hook `window.__teul`.
+- **e2e:** 35 scenarios in a real headless Firefox through WebDriver BiDi (`scripts/bidi.mjs`). They run against `vite preview` of the e2e build, which has the test hook `window.__teul`.
 - **Tools, not tests:** the photo session (`shoot.mjs`) and performance measurements (`perf.mjs`).
 
 ## How to run
@@ -74,6 +74,7 @@ None of this exists in a release (`vite build`, APK).
 | `taxi.mjs` | A list without duplicates, an honest price with the arrival time and the reason, closed places with an explanation, every ride costs exactly the price shown and ends on a free cell |
 | `maps.mjs` | "Maps" from the smartphone and the computer: a map with street names and the hero's dot, search ("coffee", a name, "pharmacy"), a card with hours, description, photo and the week by days, "Who works when", hours on the paper map, a route, a taxi from the card at the price shown, dearer in the rain than on a clear day, layers |
 | `backup.mjs` | "Backup": world A to a file under a passphrase, a too-short and a wrong passphrase, the file opened in world B gives the same state, the save in IndexedDB is sealed, "keep both" gives a second world |
+| `storage.mjs` | A browser that refuses the site its storage (the web storage switched off; all cross-site data blocked with the game in another site's frame, as on itch.io): the game's own screen in the player's language with what to do and links to the game's page and downloads, never a raw error; with default privacy the same frame starts the game |
 | `perf.mjs` | Frame measurements (not a test) |
 | `shoot.mjs` | A photo session of the world (not a test) |
 

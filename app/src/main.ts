@@ -30,6 +30,7 @@ installPixelKit();
 usePixelIcons(pixelIconSvg);
 import { packOf } from './workshop/voxels';
 import { t } from './i18n';
+import { canStore, isStorageRefusal, storageBlocked } from './storagecheck';
 
 guardPictures();
 
@@ -203,6 +204,13 @@ async function main(): Promise<void> {
   // a test world that starts with enough coins to buy what a test needs (its own save, never in a release build)
   const rich = import.meta.env.MODE !== 'production' && q.has('rich');
   const base = rich ? basePack.replace('"start_coins": 300', '"start_coins": 6000') : basePack;
+  // a browser that refuses this site its storage (all cross-site data blocked in another site's frame, a strict
+  // private mode): say so and what to do, rather than fail on the first touch of the storage
+  if (!(await canStore())) {
+    loading.done();
+    storageBlocked(root);
+    return;
+  }
   // a new build lets go of anything an older one cached (never a mix of old and new files)
   await settleUpdate();
   const storeName = debug.demo ? 'teul-demo' : startingWorld(rich ? 'rich' : other || null);
@@ -338,5 +346,10 @@ async function main(): Promise<void> {
 main().catch((err) => {
   console.error(err);
   loading.done();
+  // storage refused later on (the probe passed, the browser changed its mind): the same friendly screen
+  if (isStorageRefusal(err)) {
+    storageBlocked(document.getElementById('app') as HTMLElement);
+    return;
+  }
   document.body.append(Object.assign(document.createElement('pre'), { textContent: String(err), style: 'color:#e8788c;padding:16px;white-space:pre-wrap' }));
 });

@@ -30,7 +30,7 @@ gen=0; core=0; app=0; suites=()
 want() { for s in "$@"; do [[ " ${suites[*]-} " == *" $s "* ]] || suites+=("$s"); done; }
 if [ $full = 1 ]; then
   gen=1; core=1; app=1
-  want flows paper wonders rift
+  want flows paper wonders rift storage
 else
   while IFS= read -r f; do
     case "$f" in
@@ -47,6 +47,7 @@ else
         case "$f" in
           app/src/game.ts|app/src/pixel/*|app/src/scene.ts) want flows ;;
           app/src/wonders/*) want wonders ;;
+          app/src/storagecheck.ts|app/src/main.ts) want storage ;;
           *rift*) want rift ;;
           *paper*) want paper ;;
         esac ;;

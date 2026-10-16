@@ -1070,6 +1070,9 @@ input.hex { width: 34px; height: 30px; padding: 0; border: 0; background: transp
 .maps-slot em.shut { color: #d93025; }
 /* «Резервна копія» */
 .backup { z-index: 48; }
+.storage-ways { margin: 2px 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; line-height: 1.4; }
+.storage-ways a { color: var(--teal); overflow-wrap: anywhere; }
+.storage-blocked .settings-card p { margin: 0; line-height: 1.4; }
 .backup-block { display: flex; flex-direction: column; gap: 6px; padding: 6px 0; border-top: 2px solid rgba(255, 255, 255, 0.06); }
 .backup-block:first-child { border-top: 0; }
 .backup-row { display: flex; gap: 6px; flex-wrap: wrap; }

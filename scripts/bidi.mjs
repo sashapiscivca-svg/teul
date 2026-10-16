@@ -56,6 +56,9 @@ export async function withFirefox(fn, { width = 844, height = 390, prefs = {} } 
   const first = (await send('browsingContext.getTree', {})).contexts[0].context;
   const makePage = (context) => ({
     logs,
+    /** The raw BiDi command and this tab's context, for what the helpers below do not cover (frames). */
+    send,
+    context,
     sleep,
     async viewport(w, h) {
       await send('browsingContext.setViewport', { context, viewport: { width: w, height: h }, devicePixelRatio: 1 });

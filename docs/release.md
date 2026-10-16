@@ -47,6 +47,8 @@ The project is `desktop/`: `src-tauri/` (Rust, Tauri 2.12, versions pinned with 
 
 The page has no access to files, the shell or other plugins. The CSP is offline: only the app's own scripts and wasm (`'wasm-unsafe-eval'`), styles with `'unsafe-inline'`, images, sound and fonts from the app itself or from `data:`/`blob:`, connections only to the app itself (`ipc:`), no outside addresses.
 
+The web and Android builds set no content security policy of their own (GitHub Pages sends none, and Capacitor's WebView serves the app from `https://localhost` without one). They are offline by construction: the client makes no network requests — it loads only its own files (scripts, wasm, music) — and on Android the `INTERNET` permission is there only because the WebView needs it to load the app's own pages.
+
 ### Building on Linux
 
 The host needs neither GTK/WebKit headers, nor NSIS, nor a Windows SDK: everything is in the container `desktop/build.Containerfile` (Debian trixie, Rust 1.99, `cargo-xwin`, clang/lld, NSIS). Only podman (or docker) is needed, and no root.

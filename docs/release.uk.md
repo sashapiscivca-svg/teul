@@ -47,6 +47,8 @@ scripts/build-android-release.sh     # wasm → app/dist (production) → cap sy
 
 Доступу до файлів, оболонки й інших плагінів сторінка не має. CSP офлайнова: лише свої скрипти й wasm (`'wasm-unsafe-eval'`), стилі з `'unsafe-inline'`, картинки, звук і шрифти — свої або з `data:`/`blob:`, з'єднання — лише зі своїм застосунком (`ipc:`), жодних зовнішніх адрес.
 
+Вебверсія й Android власної CSP не задають (GitHub Pages її не надсилає, а WebView Capacitor віддає застосунок з `https://localhost` без неї). Вони офлайнові за будовою: клієнт не робить мережевих запитів — завантажує лише власні файли (скрипти, wasm, музику), — а дозвіл `INTERNET` на Android є лише тому, що без нього WebView не завантажить власні сторінки застосунку.
+
 ### Збірка на Linux
 
 Хостові не потрібні ні заголовки GTK/WebKit, ні NSIS, ні Windows SDK: усе в контейнері `desktop/build.Containerfile` (Debian trixie, Rust 1.99, `cargo-xwin`, clang/lld, NSIS). Потрібен лише podman (або docker), root не потрібен.

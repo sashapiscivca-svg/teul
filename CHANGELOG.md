@@ -18,7 +18,7 @@ The first public release: **Lypove only**. Teul is now a fully offline, single-p
 
 ### Changed
 
-- The content security policy is offline on every platform.
+- The desktop app's content security policy is offline (the app's own files only, no outside addresses). *(Corrected in 1.1.1: this line first said "on every platform". The web and Android builds set no content security policy; they are offline because the game makes no network requests — it loads only its own files.)*
 - Documentation is in English with Ukrainian versions; internal design notes are no longer part of the repository.
 - CI runs the core's tests on Linux, macOS and Windows, checks the content pack and builds the client; the web version is published on GitHub Pages.
 

@@ -1,6 +1,7 @@
 // Keeping the world: opening it sealed at launch (the data key, the sealed web storage, the store), the
 // «Резервна копія» sheet's work, the daily copies, and what the player sees when a save cannot be opened.
 
+import { ownCache, ownKey } from './update';
 import { BackupError, backupName, collect, exportBundle, importBundle, keepDaily, loadDaily, problemText, restore, type WorldBundle } from './backup';
 import { publicKeyOf } from './engine';
 import { openFile, saveFile, secretDelete } from './platform';
@@ -213,17 +214,30 @@ export async function eraseEverything(store: Store | null): Promise<void> {
   }
   for (const n of names) await deleteStore(n);
   await secretDelete(DATA_KEY_NAME);
-  try {
-    globalThis.localStorage?.clear();
-    globalThis.sessionStorage?.clear();
-  } catch {
-    // storage blocked: nothing was kept there
+  // only the game's own entries: the origin may be shared with other games (itch.io)
+  for (const get of [() => globalThis.localStorage, () => globalThis.sessionStorage]) {
+    try {
+      const st = get();
+      if (st) forgetOwn(st);
+    } catch {
+      // storage blocked: nothing was kept there
+    }
   }
   try {
-    for (const c of (await globalThis.caches?.keys?.()) ?? []) await globalThis.caches.delete(c);
+    for (const c of (await globalThis.caches?.keys?.()) ?? []) if (ownCache(c)) await globalThis.caches.delete(c);
   } catch {
     // no caches
   }
+}
+
+/** Removes the game's own entries from a web storage and leaves everything else on the origin as it is. */
+export function forgetOwn(st: Pick<Storage, 'length' | 'key' | 'removeItem'>): void {
+  const mine: string[] = [];
+  for (let i = 0; i < st.length; i++) {
+    const k = st.key(i);
+    if (k !== null && ownKey(k)) mine.push(k);
+  }
+  for (const k of mine) st.removeItem(k);
 }
 
 export { deleteStore, formatOf };

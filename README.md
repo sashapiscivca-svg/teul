@@ -6,7 +6,7 @@
 
 **A cozy, fully offline life sim in pixel-art isometry.** You move into **Lypove** (Липове), a small Ukrainian town that lives by your device's real calendar and clock: the townsfolk go to work, the market opens in the morning, the lanterns come on at dusk, and the seasons, holidays and full moons are the real ones.
 
-**▶ [Play in the browser](https://sashapiscivca-svg.github.io/teul/)** — no install, no account; your world is saved in the browser.
+**▶ [Play in the browser](https://sashapiscivca-svg.github.io/teul/)** — no install, no account; your world is saved in the browser. Also on **[itch.io](https://parsivald.itch.io/teul)**.
 
 ![Dusk falls on the market square of Lypove: the light turns from afternoon to night and the street lanterns come on](docs/media/dusk.gif)
 

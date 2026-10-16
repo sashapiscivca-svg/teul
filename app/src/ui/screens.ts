@@ -132,8 +132,10 @@ export function randomLook(rand: () => number = Math.random): Look {
 function sprite(layers: Layer[], size: number, crop?: [number, number, number, number]): HTMLCanvasElement {
   const [cx, cy, cw, ch] = crop ?? [0, 0, HERO_PX, HERO_PX];
   const canvas = h('canvas', { width: String(cw * 2), height: String(ch * 2) });
-  canvas.style.width = `${size}px`;
-  canvas.style.height = `${(size * ch) / cw}px`;
+  // fitted into a size × size square: a tall crop (the whole figure, for the build) must not spill out of its button
+  const k = size / Math.max(cw, ch);
+  canvas.style.width = `${cw * k}px`;
+  canvas.style.height = `${ch * k}px`;
   const ctx = canvas.getContext('2d');
   if (ctx) {
     ctx.scale(2, 2);
